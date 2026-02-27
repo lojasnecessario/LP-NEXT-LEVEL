@@ -9,8 +9,8 @@ import { useState, useEffect } from 'react';
 const HeroSection = () => (
   <>
     {/* Hero Section */}
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-emerald-600/10 blur-[120px] rounded-full -z-10" />
+    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-clip">
+      <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-emerald-600/10 blur-[120px] rounded-full -z-10" />
 
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.div

@@ -3,8 +3,8 @@ import { motion } from 'motion/react';
 
 const WorkoutSection = () => (
     <>
-        <section className="py-24 relative overflow-hidden">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[400px] bg-emerald-600/5 blur-[100px] rounded-full -z-10" />
+        <section className="py-24 relative overflow-clip">
+            <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[400px] bg-emerald-600/5 blur-[100px] rounded-full -z-10" />
 
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">

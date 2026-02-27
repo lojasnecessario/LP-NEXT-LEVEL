@@ -21,7 +21,7 @@ export default function ThankYou() {
                 <div className="max-w-2xl w-full">
                     <div className="relative text-center">
                         {/* Background Glow */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/20 rounded-full blur-[100px] pointer-events-none" />
+                        <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-500/20 rounded-full blur-[100px] pointer-events-none" />
 
                         <div className="relative z-10 bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 mb-8 backdrop-blur-xl">
                             <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-6">

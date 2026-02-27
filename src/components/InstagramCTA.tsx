@@ -2,8 +2,8 @@ import { Instagram, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const InstagramCTA = () => (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-[#050505] to-[#0a0a0a]">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[400px] bg-emerald-600/5 blur-[120px] rounded-full -z-10" />
+    <section className="py-24 relative overflow-clip bg-gradient-to-b from-[#050505] to-[#0a0a0a]">
+        <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[400px] bg-emerald-600/5 blur-[120px] rounded-full -z-10" />
 
         <div className="max-w-4xl mx-auto px-6 text-center">
             <motion.div
