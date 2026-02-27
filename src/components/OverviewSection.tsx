@@ -20,7 +20,7 @@ const features = [
     {
         icon: Dumbbell,
         title: "Tracker de Treinos Avançado",
-        description: "Planejamento semanal de treinos, registro de exercícios, séries, repetições e conclusão diária."
+        description: "A I.A faz seu planejamento semanal de treinos, registro de exercícios, séries, repetições e conclusão diária."
     },
     {
         icon: BookOpen,

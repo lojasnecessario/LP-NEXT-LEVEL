@@ -17,13 +17,13 @@ const TestimonialsSection = () => (
             {[
               {
                 name: "Lucas Almeida",
-                role: "Empreendedor",
-                text: "O Next Level mudou completamente meu jogo. Eu costumava procrastinar 4h por dia. Hoje, minha rotina é automática e viciante.",
+                role: "Estudante",
+                text: "O Next Level mudou completamente meu jogo. Eu costumava procrastinar 24h por dia. Hoje, minha rotina é automática e viciante.",
                 avatar: "https://i.pravatar.cc/150?u=lucas"
               },
               {
                 name: "Mariana Costa",
-                role: "Empreendedor",
+                role: "Social media",
                 text: "O sistema de XP é genial. Eu me sinto mal se não completo minhas tarefas de leitura e treino. Finalmente a consistência veio.",
                 avatar: "https://i.pravatar.cc/150?u=mariana"
               },

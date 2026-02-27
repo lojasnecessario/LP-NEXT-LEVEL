@@ -18,7 +18,7 @@ const ProblemSolutionSection = () => (
               </h2>
               <div className="space-y-6">
                 {[
-                  "Rotinas genéricas que não respeitam seu biotipo",
+                  "Rotinas malucas que não respeitam seu cotidiano e situação atual",
                   "Falta de clareza sobre o que fazer a seguir",
                   "Procrastinação por excesso de escolhas",
                   "Falta de motivação para manter a consistência"
@@ -38,7 +38,7 @@ const ProblemSolutionSection = () => (
                 {[
                   "IA que aprende com seus hábitos e ajusta sua rotina",
                   "Gamificação real: ganhe XP por cada vitória",
-                  "Dashboard focado: apenas o que importa, agora",
+                  "Rotina e treinos totalmente feitos com base no seu perfil",
                   "Ecossistema completo: Saúde, Mente e Foco"
                 ].map((text, i) => (
                   <div key={i} className="flex gap-4 items-center text-white">
