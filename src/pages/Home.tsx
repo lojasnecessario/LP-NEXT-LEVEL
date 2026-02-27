@@ -37,7 +37,7 @@ export default function Home() {
                             Sua vida, <span className="gradient-text">organizada pela IA</span>.
                         </h2>
                         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                            Veja como o Next Level transforma sua rotina em uma jornada de alta performance com uma interface intuitiva e viciante.
+                            Fuja da estagnação e procrastinação com o poder da primeira inteligência artificial de rendimento e alta-performance do mundo. Ela constrói a rotina perfeita baseada nos seus objetivos e cotidiano, faz treinos totalmente individuais e te guia no caminho perfeito para escapar da mediocridade que você vive.
                         </p>
                     </div>
                     <AppShowcase />

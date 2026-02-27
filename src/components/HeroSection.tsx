@@ -22,11 +22,11 @@ const HeroSection = () => (
             O Futuro da Performance Humana
           </span>
           <h1 className="text-5xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tight">
-            Pare de viver no automático.<br />
-            <span className="gradient-text">Assuma o controle da sua vida.</span>
+            Você sabe que tem algo errado<br />
+            <span className="gradient-text">Mas não sabe como mudar.</span>
           </h1>
           <h2 className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Fuja da estagnação e procrastinação com o poder da primeira inteligência artificial de rendimento e alta-performance do mundo. Ela constrói a rotina perfeita baseada nos seus objetivos e cotidiano, faz treinos totalmente individuais e te guia no caminho perfeito para escapar da mediocridade que você vive.
+            Pare de viver no automático e comece a viver a vida que você sabe que pode alcançar. Veja como:
           </h2>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
