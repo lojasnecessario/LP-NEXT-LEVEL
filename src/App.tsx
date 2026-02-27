@@ -12,6 +12,7 @@ import GuaranteeSection from './components/GuaranteeSection';
 import PricingSection from './components/PricingSection';
 import InstagramCTA from './components/InstagramCTA';
 import Footer from './components/Footer';
+import DiscountPopup from './components/DiscountPopup';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,6 +54,7 @@ export default function App() {
       <PricingSection />
       <InstagramCTA />
       <Footer />
+      <DiscountPopup />
     </div>
   );
 }
