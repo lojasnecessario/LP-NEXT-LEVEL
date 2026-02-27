@@ -1,7 +1,7 @@
 import {
   AlertTriangle, Activity, Play, ShieldCheck, Brain, Zap, Trophy, Dumbbell,
   BookOpen, Calendar, Bell, Droplets, ChevronRight, CheckCircle2, Star,
-  ArrowRight, Lock, Book, Menu, X
+  ArrowRight, Lock, Book, Menu, X, Instagram
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
@@ -45,9 +45,9 @@ const Footer = () => (
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-gray-500 text-xs gap-4">
           <p>© 2026 Next Level AI. Todos os direitos reservados.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Instagram</a>
-          </div>
+          <a href="https://www.instagram.com/sociedade.nextlevel/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <Instagram className="w-5 h-5" />
+          </a>
         </div>
       </div>
     </footer>

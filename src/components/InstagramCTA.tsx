@@ -20,7 +20,14 @@ const InstagramCTA = () => (
                     </div>
 
                     <h2 className="text-3xl md:text-5xl font-black mb-6">
-                        Nos siga no <span className="text-emerald-400">Instagram</span>
+                        <a
+                            href="https://www.instagram.com/sociedade.nextlevel/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-8 md:mt-0 flex-shrink-0"
+                        >
+                            Nos siga no <span className="text-emerald-400">Instagram</span>
+                        </a>
                     </h2>
 
                     <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
