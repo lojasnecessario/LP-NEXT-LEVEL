@@ -47,8 +47,8 @@ export default function Quiz() {
 
     const handleStart = () => setStep('yesno');
 
-    const handleYesNo = (answerYes: boolean) => {
-        if (answerYes) setScore(s => s + 1);
+    const handleAgreementQuestion = (points: number) => {
+        setScore(s => s + points);
 
         if (currentQuestionIndex < yesNoQuestions.length - 1) {
             setCurrentQuestionIndex(i => i + 1);
@@ -76,7 +76,7 @@ export default function Quiz() {
     };
 
     const getResult = () => {
-        if (score <= 3) {
+        if (score <= 5) {
             return {
                 level: "Nível 1",
                 title: "Procrastinação Leve",
@@ -85,7 +85,7 @@ export default function Quiz() {
                 border: "border-yellow-400/30",
                 description: "Você tem momentos de foco e vontade de crescer, mas a falta de consistência está sugando seu potencial aos poucos. O problema ainda não é grave o suficiente para destruir sua vida, mas vai escalar mais rápido do que você pensa.",
             };
-        } else if (score <= 7) {
+        } else if (score <= 11) {
             return {
                 level: "Nível 2",
                 title: "Procrastinação Crônica",
@@ -176,18 +176,26 @@ export default function Quiz() {
 
                         <div className="flex flex-col gap-4">
                             <button
-                                onClick={() => handleYesNo(true)}
+                                onClick={() => handleAgreementQuestion(2)}
                                 className="w-full py-5 px-6 bg-zinc-900 hover:bg-zinc-800 border-2 border-zinc-800 hover:border-emerald-500 text-left rounded-xl text-lg font-medium transition-colors flex justify-between items-center group"
                             >
-                                <span>Sim, me identifico</span>
+                                <span>Sim, me identifico muito</span>
                                 <span className="text-zinc-600 group-hover:text-emerald-500 transition-colors">→</span>
                             </button>
 
                             <button
-                                onClick={() => handleYesNo(false)}
+                                onClick={() => handleAgreementQuestion(1)}
+                                className="w-full py-5 px-6 bg-zinc-900/40 hover:bg-zinc-800/80 border-2 border-zinc-800 hover:border-emerald-500 text-left rounded-xl text-lg font-medium transition-colors flex justify-between items-center group"
+                            >
+                                <span>Me identifico um pouco</span>
+                                <span className="text-zinc-600 group-hover:text-emerald-500 transition-colors">→</span>
+                            </button>
+
+                            <button
+                                onClick={() => handleAgreementQuestion(0)}
                                 className="w-full py-5 px-6 bg-transparent border-2 border-zinc-900 text-left rounded-xl text-lg font-medium text-zinc-500 hover:text-white hover:border-zinc-800 transition-colors"
                             >
-                                <span>Não</span>
+                                <span>Não me identifico</span>
                             </button>
                         </div>
                     </motion.div>
