@@ -38,26 +38,14 @@ export default function ThankYou() {
 
                             {/* Video Placeholder Area */}
                             <div className="w-full aspect-video bg-black/40 rounded-2xl border border-white/10 mb-8 overflow-hidden relative group">
-                                {/* Replace the iframe src with your actual YouTube embed link when ready */}
-                                {/* <iframe 
-                  className="absolute inset-0 w-full h-full"
-                  src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                  title="YouTube video player" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                ></iframe> */}
-
-                                {/* Temporary visual before video is added */}
-                                <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-500">
-                                    <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform cursor-pointer">
-                                        <svg className="w-8 h-8 opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M8 5v14l11-7z" />
-                                        </svg>
-                                    </div>
-                                    <span className="text-sm font-medium opacity-50">Vídeo de boas-vindas</span>
-                                    <span className="text-xs opacity-30 mt-1">(Link será inserido aqui)</span>
-                                </div>
+                                <iframe
+                                    className="absolute inset-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/X16Yyj3BWYE"
+                                    title="Boas-vindas Next Level"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
 
                             <div className="bg-white/5 rounded-2xl p-6 text-left mb-8 border border-white/5">
