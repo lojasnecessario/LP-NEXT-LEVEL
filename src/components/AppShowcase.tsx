@@ -124,13 +124,13 @@ const AppShowcase = () => {
             <div className="bg-white/5 rounded-3xl p-6 border border-white/5">
               <h4 className="text-sm font-black text-white mb-1">Ritmo de Tarefas</h4>
               <p className="text-[8px] text-gray-500 mb-6">Tarefas cumpridas nos últimos 7 dias</p>
-              
+
               <div className="flex justify-between items-end h-32 gap-2">
                 {['Q', 'S', 'S', 'D', 'S', 'T', 'Q'].map((day, i) => (
                   <div key={i} className="flex-1 flex flex-col items-center gap-2">
                     <div className="w-full bg-white/5 rounded-t-sm relative h-full">
-                      <div 
-                        className={`absolute bottom-0 left-0 right-0 rounded-t-sm ${i === 6 ? 'bg-emerald-500' : 'bg-emerald-500/20'}`} 
+                      <div
+                        className={`absolute bottom-0 left-0 right-0 rounded-t-sm ${i === 6 ? 'bg-emerald-500' : 'bg-emerald-500/20'}`}
                         style={{ height: i === 6 ? '85%' : '10%' }}
                       />
                     </div>
@@ -238,7 +238,7 @@ const AppShowcase = () => {
                 </div>
               </div>
               <p className="text-[10px] text-gray-500 mb-8">Seus treinos nos últimos 7 dias</p>
-              
+
               <div className="flex justify-between px-2">
                 {['SEM', 'SEM', 'SEM', 'ATU'].map((label, i) => (
                   <span key={i} className="text-[8px] font-bold text-gray-600">{label}</span>
@@ -363,7 +363,7 @@ const AppShowcase = () => {
             {/* Title Section */}
             <div className="text-center">
               <h3 className="text-3xl font-black text-white mb-4">Planner Semanal</h3>
-              
+
               <div className="flex items-center justify-center gap-8 mb-6">
                 <ChevronRight className="w-5 h-5 text-gray-500 rotate-180" />
                 <div className="text-center">
@@ -478,7 +478,7 @@ const AppShowcase = () => {
                 </div>
               </div>
               <p className="text-[10px] text-gray-500 mb-8">Sessões nos últimos 7 dias</p>
-              
+
               <div className="flex justify-between px-2">
                 {['SEM', 'SEM', 'SEM', 'ATU'].map((label, i) => (
                   <span key={i} className="text-[8px] font-bold text-gray-600">{label}</span>
@@ -686,13 +686,13 @@ const AppShowcase = () => {
       {/* Phone Mockup */}
       <div className="relative flex justify-center items-center">
         {/* Carousel Arrows */}
-        <button 
+        <button
           onClick={prev}
           className="absolute left-0 md:-left-12 z-20 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-all"
         >
           <ChevronRight className="w-6 h-6 rotate-180" />
         </button>
-        <button 
+        <button
           onClick={next}
           className="absolute right-0 md:-right-12 z-20 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-all"
         >
@@ -705,7 +705,7 @@ const AppShowcase = () => {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#333] rounded-b-2xl z-30 flex items-center justify-center">
             <div className="w-2 h-2 rounded-full bg-[#111]" />
           </div>
-          
+
           {/* Screen Content */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -740,10 +740,10 @@ const AppShowcase = () => {
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
               {layouts[activeIndex].description}
             </p>
-            
+
             <div className="flex gap-2">
               {layouts.map((_, i) => (
-                <button 
+                <button
                   key={i}
                   onClick={() => setActiveIndex(i)}
                   className={`h-1.5 rounded-full transition-all duration-300 ${i === activeIndex ? 'w-8 bg-emerald-500' : 'w-2 bg-white/20'}`}
@@ -754,8 +754,8 @@ const AppShowcase = () => {
         </AnimatePresence>
 
         <div className="pt-8 border-t border-white/5">
-          <button className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold transition-all active:scale-95">
-            Testar esta funcionalidade
+          <button onClick={() => window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"} className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold transition-all active:scale-95">
+            mudar minha jornada agora
           </button>
         </div>
       </div>
