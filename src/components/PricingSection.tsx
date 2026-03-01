@@ -40,7 +40,7 @@ const PricingSection = () => {
                         exit={{ opacity: 0, y: -20, scale: 0.9, color: '#ef4444', textDecoration: 'line-through' }}
                         className="text-6xl font-black"
                       >
-                        89,90
+                        49,90
                       </motion.span>
                     ) : (
                       <motion.span
@@ -50,7 +50,7 @@ const PricingSection = () => {
                         transition={{ type: "spring", stiffness: 300, damping: 20 }}
                         className="text-6xl font-black text-emerald-500"
                       >
-                        49,90
+                        28,90
                       </motion.span>
                     )}
                   </AnimatePresence>
@@ -65,7 +65,7 @@ const PricingSection = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-xs text-red-500 font-bold uppercase tracking-wider"
                       >
-                        de <span className="line-through">89,90</span> por 49,90 HOJE
+                        de <span className="line-through">49,90</span> por 28,90 HOJE
                       </motion.p>
                     )}
                   </AnimatePresence>
