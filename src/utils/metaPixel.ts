@@ -1,4 +1,4 @@
-export const PIXEL_ID = (import.meta as any).env.VITE_META_PIXEL_ID;
+export const PIXEL_ID = (import.meta as any).env?.VITE_META_PIXEL_ID || '2027379061145709';
 
 export const initMetaPixel = () => {
     if (!PIXEL_ID || typeof window === 'undefined') return;
