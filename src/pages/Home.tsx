@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
+import ProblemAgitation from '../components/ProblemAgitation';
 import ProblemSolutionSection from '../components/ProblemSolutionSection';
 import AppShowcase from '../components/AppShowcase';
 import OverviewSection from '../components/OverviewSection';
@@ -28,6 +29,7 @@ export default function Home() {
         <div className="min-h-screen bg-[#050505] text-white selection:bg-indigo-500/30">
             <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <HeroSection />
+            <ProblemAgitation />
             <ProblemSolutionSection />
 
             <section id="features" className="py-8 overflow-clip">
