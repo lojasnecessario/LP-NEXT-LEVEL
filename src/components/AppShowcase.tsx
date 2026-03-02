@@ -685,79 +685,90 @@ const AppShowcase = () => {
   return (
     <div className="grid lg:grid-cols-2 gap-12 items-center">
       {/* Phone Mockup */}
-      <div className="relative flex justify-center items-center">
-        {/* Carousel Arrows */}
-        <button
-          onClick={prev}
-          className="absolute left-0 md:-left-12 z-20 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-all"
-        >
-          <ChevronRight className="w-6 h-6 rotate-180" />
-        </button>
-        <button
-          onClick={next}
-          className="absolute right-0 md:-right-12 z-20 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-all"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
+      <div className="relative flex flex-col justify-center items-center">
+        {/* Swipe Hint */}
+        <div className="mb-4 text-center animate-pulse">
+          <span className="text-xs font-bold text-gray-400 bg-white/5 px-4 py-2 rounded-full border border-white/10 flex items-center gap-2">
+            <ChevronRight className="w-4 h-4 text-emerald-500" />
+            Role o celular para ter imersão
+            <ChevronRight className="w-4 h-4 text-emerald-500 rotate-180" />
+          </span>
+        </div>
 
-        {/* The Phone */}
-        <div className="relative w-[300px] h-[600px] bg-[#1a1a1a] rounded-[3rem] border-[8px] border-[#333] shadow-2xl overflow-hidden">
-          {/* Notch */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#333] rounded-b-2xl z-30 flex items-center justify-center">
-            <div className="w-2 h-2 rounded-full bg-[#111]" />
+        <div className="relative flex justify-center items-center w-full">
+          {/* Carousel Arrows */}
+          <button
+            onClick={prev}
+            className="absolute left-0 md:-left-12 z-20 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-all"
+          >
+            <ChevronRight className="w-6 h-6 rotate-180" />
+          </button>
+          <button
+            onClick={next}
+            className="absolute right-0 md:-right-12 z-20 w-12 h-12 rounded-full glass flex items-center justify-center hover:bg-white/10 transition-all"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* The Phone */}
+          <div className="relative w-[300px] h-[600px] bg-[#1a1a1a] rounded-[3rem] border-[8px] border-[#333] shadow-2xl overflow-hidden">
+            {/* Notch */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#333] rounded-b-2xl z-30 flex items-center justify-center">
+              <div className="w-2 h-2 rounded-full bg-[#111]" />
+            </div>
+
+            {/* Screen Content */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeIndex}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+                className="h-full w-full"
+              >
+                {layouts[activeIndex].content}
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Home Indicator */}
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-white/20 rounded-full z-30" />
           </div>
+        </div>
 
-          {/* Screen Content */}
+        {/* Description */}
+        <div className="space-y-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="h-full w-full"
             >
-              {layouts[activeIndex].content}
+              <span className="text-emerald-400 font-bold uppercase tracking-widest text-sm mb-4 block">Funcionalidade {activeIndex + 1}</span>
+              <h3 className="text-4xl font-black mb-6">{layouts[activeIndex].title}</h3>
+              <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                {layouts[activeIndex].description}
+              </p>
+
+              <div className="flex gap-2">
+                {layouts.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActiveIndex(i)}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${i === activeIndex ? 'w-8 bg-emerald-500' : 'w-2 bg-white/20'}`}
+                  />
+                ))}
+              </div>
             </motion.div>
           </AnimatePresence>
 
-          {/* Home Indicator */}
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-24 h-1 bg-white/20 rounded-full z-30" />
-        </div>
-      </div>
-
-      {/* Description */}
-      <div className="space-y-8">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeIndex}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-          >
-            <span className="text-emerald-400 font-bold uppercase tracking-widest text-sm mb-4 block">Funcionalidade {activeIndex + 1}</span>
-            <h3 className="text-4xl font-black mb-6">{layouts[activeIndex].title}</h3>
-            <p className="text-gray-400 text-lg leading-relaxed mb-8">
-              {layouts[activeIndex].description}
-            </p>
-
-            <div className="flex gap-2">
-              {layouts.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActiveIndex(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${i === activeIndex ? 'w-8 bg-emerald-500' : 'w-2 bg-white/20'}`}
-                />
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
-
-        <div className="pt-8 border-t border-white/5">
-          <button onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"; }} className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold transition-all active:scale-95">
-            mudar minha jornada agora
-          </button>
+          <div className="pt-8 border-t border-white/5">
+            <button onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"; }} className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold transition-all active:scale-95">
+              mudar minha jornada agora
+            </button>
+          </div>
         </div>
       </div>
     </div>

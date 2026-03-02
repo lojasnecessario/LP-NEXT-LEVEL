@@ -39,7 +39,7 @@ export default function Home() {
                             Sua vida, <span className="gradient-text">organizada pela IA</span>.
                         </h2>
                         <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                            A primeira inteligência artificial de alta-performance que constrói sua rotina ideal e treinos personalizados. O atalho perfeito para escapar da estagnação.
+                            A primeira inteligência artificial de alta-performance que constrói sua rotina ideal e treinos personalizados.
                         </p>
                     </div>
                     <AppShowcase />
