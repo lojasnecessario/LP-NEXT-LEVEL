@@ -1,5 +1,6 @@
 import { Dumbbell, Target, Zap, Activity } from 'lucide-react';
 import { motion } from 'motion/react';
+import { trackMetaEvent } from '../utils/metaPixel';
 
 const WorkoutSection = () => (
     <>
@@ -67,6 +68,15 @@ const WorkoutSection = () => (
                             Ganhe XP a cada treino concluído e observe sua evolução na plataforma. O tédio foge, a dopamina aumenta e seu foco se torna inquebrável.
                         </p>
                     </motion.div>
+                </div>
+
+                <div className="mt-16 text-center">
+                    <button
+                        onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"; }}
+                        className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold transition-all active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]"
+                    >
+                        Ter meus treinos otimizados pela IA
+                    </button>
                 </div>
             </div>
         </section>

@@ -1,5 +1,6 @@
 import { Brain, LayoutDashboard, Trophy, Dumbbell, BookOpen, Calendar, Bell, Droplets } from 'lucide-react';
 import { motion } from 'motion/react';
+import { trackMetaEvent } from '../utils/metaPixel';
 
 const features = [
     {
@@ -89,6 +90,15 @@ const OverviewSection = () => {
                             </p>
                         </motion.div>
                     ))}
+                </div>
+
+                <div className="mt-16 text-center">
+                    <button
+                        onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"; }}
+                        className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold transition-all active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]"
+                    >
+                        Quero a IA trabalhando por mim
+                    </button>
                 </div>
             </div>
         </section>
