@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
+import { trackMetaEvent } from '../utils/metaPixel';
 
 const AppShowcase = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -754,7 +755,7 @@ const AppShowcase = () => {
         </AnimatePresence>
 
         <div className="pt-8 border-t border-white/5">
-          <button onClick={() => window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"} className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold transition-all active:scale-95">
+          <button onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"; }} className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold transition-all active:scale-95">
             mudar minha jornada agora
           </button>
         </div>

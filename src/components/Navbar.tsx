@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
+import { trackMetaEvent } from '../utils/metaPixel';
 
 const Navbar = ({ scrolled, isMenuOpen, setIsMenuOpen }: any) => (
   <>
@@ -23,7 +24,7 @@ const Navbar = ({ scrolled, isMenuOpen, setIsMenuOpen }: any) => (
           <a href="#features" className="hover:text-white transition-colors">Funcionalidades</a>
           <a href="#how-it-works" className="hover:text-white transition-colors">Como Funciona</a>
           <a href="#pricing" className="hover:text-white transition-colors">Preços</a>
-          <button onClick={() => window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"} className="bg-white text-black px-6 py-2.5 rounded-full font-bold hover:bg-emerald-50 transition-all active:scale-95">
+          <button onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"; }} className="bg-white text-black px-6 py-2.5 rounded-full font-bold hover:bg-emerald-50 transition-all active:scale-95">
             Começar Agora
           </button>
         </div>
@@ -46,7 +47,7 @@ const Navbar = ({ scrolled, isMenuOpen, setIsMenuOpen }: any) => (
             <a href="#features" onClick={() => setIsMenuOpen(false)}>Funcionalidades</a>
             <a href="#how-it-works" onClick={() => setIsMenuOpen(false)}>Como Funciona</a>
             <a href="#pricing" onClick={() => setIsMenuOpen(false)}>Preços</a>
-            <button onClick={() => window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"} className="bg-emerald-600 text-white py-4 rounded-2xl">Começar Agora</button>
+            <button onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"; }} className="bg-emerald-600 text-white py-4 rounded-2xl">Começar Agora</button>
           </div>
         </motion.div>
       )}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Activity, Brain, AlertTriangle } from 'lucide-react';
+import { trackMetaEvent } from '../utils/metaPixel';
 
 const yesNoQuestions = [
     "Você tem a sensação constante de que está sempre 'atrasado' na vida em relação aos outros?",
@@ -107,6 +108,7 @@ export default function Quiz() {
     };
 
     const handleCTA = () => {
+        trackMetaEvent('Lead', { source: 'quiz_completion' });
         window.location.href = '/';
     };
 
