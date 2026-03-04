@@ -30,7 +30,12 @@ const PricingSection = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-lime-400 rounded-[2.5rem] blur opacity-20 group-hover:opacity-40 transition-opacity" />
               <div className="relative bg-[#0a0a0a] p-10 rounded-[2.5rem] flex flex-col items-center border border-white/5">
-                <p className="text-emerald-400 font-bold uppercase tracking-widest text-sm mb-4">Plano Mensal</p>
+                <div className="flex flex-col items-center gap-2 mb-4">
+                  <div className="bg-red-500 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest animate-pulse">
+                    Apenas Esta Semana
+                  </div>
+                  <p className="text-emerald-400 font-bold uppercase tracking-widest text-sm">Plano Vitalício</p>
+                </div>
 
                 <div className="flex items-baseline gap-1 mb-2 h-[80px]">
                   <span className="text-2xl font-bold mt-2">R$</span>
@@ -41,7 +46,7 @@ const PricingSection = () => {
                         exit={{ opacity: 0, y: -20, scale: 0.9, color: '#ef4444', textDecoration: 'line-through' }}
                         className="text-6xl font-black"
                       >
-                        49,90
+                        99,90
                       </motion.span>
                     ) : (
                       <motion.span
@@ -51,11 +56,11 @@ const PricingSection = () => {
                         transition={{ type: "spring", stiffness: 300, damping: 20 }}
                         className="text-6xl font-black text-emerald-500"
                       >
-                        28,90
+                        29,90
                       </motion.span>
                     )}
                   </AnimatePresence>
-                  <span className="text-gray-400">/mês</span>
+                  <span className="text-gray-400"> vitalício</span>
                 </div>
 
                 <div className="h-8 mb-8 mt-2">
@@ -66,12 +71,15 @@ const PricingSection = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-xs text-red-500 font-bold uppercase tracking-wider"
                       >
-                        de <span className="line-through">49,90</span> por 28,90 HOJE
+                        de <span className="line-through">99,90</span> por 29,90 HOJE
                       </motion.p>
                     )}
                   </AnimatePresence>
                 </div>
 
+                <p className="text-emerald-400 text-sm font-bold text-center mb-6 max-w-[250px]">
+                  Pagamento único que garante todas as atualizações do app.
+                </p>
                 <ul className="text-left space-y-4 mb-10 w-full">
                   {["Acesso completo ao App", "IA de Rotina Ilimitada", "Sistema de XP e Níveis", "Suporte Prioritário", "Relatórios de Performance IA"].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-gray-300">
