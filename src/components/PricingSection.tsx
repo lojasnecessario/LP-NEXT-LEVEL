@@ -81,7 +81,7 @@ const PricingSection = () => {
                   Pagamento único que garante todas as atualizações do app.
                 </p>
                 <ul className="text-left space-y-4 mb-10 w-full">
-                  {["Acesso completo ao App", "IA de Rotina Ilimitada", "Sistema de XP e Níveis", "Suporte Prioritário", "Relatórios de Performance IA"].map((item, i) => (
+                  {["Acesso completo ao App", "IA de Rotina e Treino Ilimitada", "Sistema de XP e Níveis", "Suporte Prioritário", "Relatórios de Performance IA"].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-gray-300">
                       <CheckCircle2 className="w-5 h-5 text-emerald-500" />
                       {item}
