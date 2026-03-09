@@ -12,14 +12,13 @@ const DiscountPopup = () => {
             const featuresEl = document.getElementById('overview');
             const pricingEl = document.getElementById('pricing');
 
-            const featuresBottom = featuresEl ? featuresEl.offsetTop + featuresEl.offsetHeight : 1500;
+            const featuresTop = featuresEl ? featuresEl.offsetTop : 0;
             const pricingTop = pricingEl ? pricingEl.offsetTop : Infinity;
             const scrollY = window.scrollY;
             const windowHeight = window.innerHeight;
 
-            // Show popup after scrolling past the Overview section
-            // and hide it when getting close to the pricing section.
-            if (scrollY > featuresBottom - windowHeight / 2 && scrollY < pricingTop - windowHeight && !isDismissed) {
+            // Show popup when scrolling into the Overview section
+            if (scrollY > featuresTop - windowHeight / 2 && scrollY < pricingTop - windowHeight && !isDismissed) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);

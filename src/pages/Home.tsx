@@ -14,6 +14,8 @@ import InstagramCTA from '../components/InstagramCTA';
 import Footer from '../components/Footer';
 import DiscountPopup from '../components/DiscountPopup';
 
+import PlatformInfoSection from '../components/PlatformInfoSection';
+
 export default function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -30,6 +32,7 @@ export default function Home() {
             <HeroSection />
             <ProblemAgitation />
             <OverviewSection />
+            <PlatformInfoSection />
 
             <section id="features" className="py-12 overflow-clip">
                 <div className="max-w-7xl mx-auto px-6">

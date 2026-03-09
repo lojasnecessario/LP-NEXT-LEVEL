@@ -67,7 +67,7 @@ const OverviewSection = () => {
                         transition={{ delay: 0.1 }}
                         className="text-gray-400 text-lg max-w-2xl mx-auto"
                     >
-                        Um ecossistema completo para transformar a sua rotina, do momento em que acorda até a hora de dormir. Tudo online, você não precisa baixar, apenas entre no site e comece sua jornada de alta performance.
+                        Um ecossistema online completo para transformar a sua rotina, do momento em que acorda até a hora de dormir.
                     </motion.p>
                 </div>
 

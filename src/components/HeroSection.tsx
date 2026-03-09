@@ -30,6 +30,14 @@ const HeroSection = () => (
             Pare de viver no automático e comece a viver a vida que você sabe que pode alcançar. Veja como:
           </h2>
 
+          <div className="flex justify-center mt-6">
+            <a
+              href="#overview"
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold transition-all active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]"
+            >
+              Pare de procrastinar com a ajuda da i.a
+            </a>
+          </div>
 
         </motion.div>
       </div>

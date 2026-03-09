@@ -19,7 +19,7 @@ const ProblemAgitation = () => {
                         <AlertCircle className="w-8 h-8 text-red-500" />
                     </div>
                     <h2 className="text-4xl md:text-5xl font-black mb-4 leading-tight">
-                        Não existe remédio para procrastinação
+                        Não existe remédio<br className="md:hidden" /> para procrastinação
                     </h2>
                     <h3 className="text-3xl md:text-4xl font-black mb-8 leading-tight text-emerald-500">
                         Mas existe sistema
