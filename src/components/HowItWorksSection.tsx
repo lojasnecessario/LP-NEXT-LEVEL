@@ -39,7 +39,7 @@ const HowItWorksSection = () => (
 
           <div className="mt-16 pt-8 border-t border-emerald-500/10 text-center">
             <button
-              onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"; }}
+              onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "/redirect"; }}
               className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 md:px-12 py-4 rounded-xl font-bold transition-all active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]"
             >
               Desbloquear minha nova rotina agora

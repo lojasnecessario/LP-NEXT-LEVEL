@@ -88,7 +88,7 @@ const PricingSection = () => {
                     </li>
                   ))}
                 </ul>
-                <button onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"; }} className="w-full py-5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg transition-all active:scale-95 shadow-xl shadow-emerald-600/20">
+                <button onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "/redirect"; }} className="w-full py-5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg transition-all active:scale-95 shadow-xl shadow-emerald-600/20">
                   Assinar Agora
                 </button>
               </div>

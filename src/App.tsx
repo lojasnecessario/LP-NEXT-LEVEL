@@ -3,6 +3,8 @@ import Home from './pages/Home';
 import ThankYou from './pages/ThankYou';
 import Quiz from './pages/Quiz';
 
+import RedirectPage from './pages/RedirectPage';
+
 export default function App() {
   return (
     <Router>
@@ -10,6 +12,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/obrigado" element={<ThankYou />} />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/redirect" element={<RedirectPage />} />
       </Routes>
     </Router>
   );
