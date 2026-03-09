@@ -18,7 +18,7 @@ const ProblemAgitation = () => {
                     <div className="mx-auto w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6">
                         <AlertCircle className="w-8 h-8 text-red-500" />
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                    <h2 className="text-3xl md:text-5xl font-black mb-4 leading-tight">
                         Não existe remédio<br className="md:hidden" /> para procrastinação
                     </h2>
                     <h3 className="text-3xl md:text-4xl font-black mb-8 leading-tight text-emerald-500">
