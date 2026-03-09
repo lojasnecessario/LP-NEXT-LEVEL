@@ -33,48 +33,51 @@ export default function RedirectPage() {
     ];
 
     return (
-        <div className="h-[100dvh] w-full overflow-hidden bg-black text-white flex flex-col items-center justify-center p-2 text-center font-['Plus_Jakarta_Sans']">
+        <div className="h-[100dvh] w-full overflow-hidden bg-black text-white flex flex-col items-center justify-center p-4 text-center font-['Plus_Jakarta_Sans']">
 
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="w-full max-w-3xl space-y-4 sm:space-y-6 md:space-y-8"
+                className="w-full max-w-3xl h-full flex flex-col justify-between py-6 md:py-12"
             >
-                {/* Main Heading */}
-                <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight px-4">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">
-                        Parabéns pela sua escolha,
-                    </span>
-                    <br />
-                    bem vindo a sua nova vida!
-                </h1>
+                <div className="flex-1 flex flex-col justify-center space-y-8 md:space-y-12">
+                    {/* Main Heading */}
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">
+                            Parabéns pela sua escolha,
+                        </span>
+                        <br />
+                        bem vindo a sua nova vida!
+                    </h1>
 
-                {/* Loading Indicator */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 0.5 }}
-                    className="flex flex-col items-center justify-center space-y-2 md:space-y-4 py-4 md:py-8"
-                >
-                    <Loader2 className="w-8 h-8 md:w-12 md:h-12 text-emerald-500 animate-spin" />
-                    <p className="text-xs sm:text-base md:text-2xl font-medium text-gray-300 px-4">
-                        Estamos te redirecionando para o pagamento...
-                    </p>
-                </motion.div>
+                    {/* Loading Indicator */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.5, duration: 0.5 }}
+                        className="flex flex-col items-center justify-center"
+                    >
+                        <Loader2 className="w-10 h-10 md:w-16 md:h-16 text-emerald-500 animate-spin mb-4" />
+                        <p className="text-sm sm:text-base md:text-2xl font-medium text-gray-300">
+                            Estamos te redirecionando para o pagamento...
+                        </p>
+                    </motion.div>
+                </div>
 
                 {/* Testimonials Section */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 0.8 }}
-                    className="pt-4 md:pt-12 w-full px-2"
+                    className="w-full mt-auto pt-4"
                 >
-                    <p className="text-[10px] sm:text-sm md:text-lg text-gray-400 mb-2 md:mb-8 font-medium uppercase tracking-wider">Veja quem já transformou sua vida</p>
+                    <p className="text-xs sm:text-sm md:text-lg text-gray-400 mb-4 font-medium uppercase tracking-wider">Veja quem já transformou sua vida</p>
 
-                    <div className="grid grid-cols-3 gap-2 md:gap-6 max-w-5xl mx-auto w-full">
+                    {/* Horizontal scroll on mobile, grid on desktop */}
+                    <div className="flex overflow-x-auto md:grid md:grid-cols-3 gap-4 pb-4 snap-x snap-mandatory scrollbar-hide w-full max-w-5xl mx-auto">
                         {testimonials.map((testimonial) => (
-                            <div key={testimonial.id} className="relative rounded-2xl overflow-hidden shadow-2xl shadow-emerald-900/20 group bg-white/5 border border-white/10 flex items-center justify-center">
+                            <div key={testimonial.id} className="flex-none w-[85%] md:w-full snap-center relative rounded-2xl overflow-hidden shadow-2xl shadow-emerald-900/20 group bg-white/5 border border-white/10 flex items-center justify-center">
                                 <img
                                     src={testimonial.image}
                                     alt={testimonial.alt}
