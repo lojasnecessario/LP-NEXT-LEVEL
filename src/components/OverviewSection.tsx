@@ -47,7 +47,7 @@ const features = [
 
 const OverviewSection = () => {
     return (
-        <section id="overview" className="py-24 bg-[#050505] relative overflow-clip">
+        <section id="overview" className="py-12 bg-[#050505] relative overflow-clip">
             <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[600px] bg-emerald-600/5 blur-[120px] rounded-full -z-10" />
 
             <div className="max-w-7xl mx-auto px-6">

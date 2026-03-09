@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 const ScienceSection = () => (
   <>
     {/* Science Section */}
-    <section className="py-8 bg-black relative overflow-clip">
+    <section className="py-12 bg-black relative overflow-clip">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6">

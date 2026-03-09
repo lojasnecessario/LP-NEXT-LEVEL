@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 const TestimonialsSection = () => (
   <>
     {/* Testimonials */}
-    <section className="py-8 overflow-hidden">
+    <section className="py-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-black text-center mb-16">Quem já está no <span className="text-emerald-400">Próximo Nível</span>.</h2>
 

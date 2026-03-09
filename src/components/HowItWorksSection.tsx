@@ -11,7 +11,7 @@ import { trackMetaEvent } from '../utils/metaPixel';
 const HowItWorksSection = () => (
   <>
     {/* How it Works */}
-    <section id="how-it-works" className="py-8 bg-emerald-600/5">
+    <section id="how-it-works" className="py-12 bg-emerald-600/5">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center space-y-12">
           <div>

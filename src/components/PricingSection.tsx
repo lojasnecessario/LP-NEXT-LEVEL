@@ -18,7 +18,7 @@ const PricingSection = () => {
   return (
     <>
       {/* Pricing Section */}
-      <section id="pricing" className="py-8 relative" ref={ref}>
+      <section id="pricing" className="py-12 relative" ref={ref}>
         <div className="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[400px] bg-lime-400/10 blur-[100px] rounded-full -z-10" />
 
         <div className="max-w-7xl mx-auto px-6 text-center">

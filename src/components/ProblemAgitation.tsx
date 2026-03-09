@@ -3,7 +3,7 @@ import { Target, Layers, Compass, BrainCircuit, AlertCircle } from 'lucide-react
 
 const ProblemAgitation = () => {
     return (
-        <section className="py-8 relative overflow-hidden bg-[#0a0a0a]">
+        <section className="py-12 relative overflow-hidden bg-[#0a0a0a]">
             {/* Background elements */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[400px] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none" />
 
