@@ -737,7 +737,7 @@ const AppShowcase = () => {
         </div>
 
         {/* Description */}
-        <div className="space-y-8">
+        <div className="space-y-8 mt-12 w-full">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}

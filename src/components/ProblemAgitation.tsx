@@ -18,9 +18,12 @@ const ProblemAgitation = () => {
                     <div className="mx-auto w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6">
                         <AlertCircle className="w-8 h-8 text-red-500" />
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
-                        Já tentou de tudo e ela <span className="text-red-500">ainda te persegue?</span>
+                    <h2 className="text-4xl md:text-5xl font-black mb-4 leading-tight">
+                        Não existe remédio para procrastinação
                     </h2>
+                    <h3 className="text-3xl md:text-4xl font-black mb-8 leading-tight text-emerald-500">
+                        Mas existe sistema
+                    </h3>
 
                     <div className="space-y-6 text-xl text-gray-400 font-medium max-w-2xl mx-auto leading-relaxed">
                         <p>
@@ -66,7 +69,7 @@ const ProblemAgitation = () => {
                         </div>
                         <div className="text-center md:text-left">
                             <p className="text-xl md:text-2xl font-black text-white leading-tight">
-                                E uma <span className="text-emerald-400">Inteligência Artificial</span> que faz tudo isso por você.
+                                E uma <span className="text-emerald-400">Inteligência Artificial baseada em ciência</span> que faz tudo isso por você.
                             </p>
                         </div>
                     </div>

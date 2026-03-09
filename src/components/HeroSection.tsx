@@ -30,12 +30,7 @@ const HeroSection = () => (
             Pare de viver no automático e comece a viver a vida que você sabe que pode alcançar. Veja como:
           </h2>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"; }} className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-2xl font-bold text-lg transition-all flex items-center justify-center gap-2 group active:scale-95 shadow-lg shadow-emerald-600/20">
-              Desbloqueie seu Próximo Nível
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
+
         </motion.div>
       </div>
     </section>

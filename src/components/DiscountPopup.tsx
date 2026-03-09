@@ -9,7 +9,7 @@ const DiscountPopup = () => {
     useEffect(() => {
         const handleScroll = () => {
             // Find elements to base scroll position on
-            const featuresEl = document.getElementById('features');
+            const featuresEl = document.getElementById('overview');
             const pricingEl = document.getElementById('pricing');
 
             const featuresBottom = featuresEl ? featuresEl.offsetTop + featuresEl.offsetHeight : 1500;
@@ -17,7 +17,7 @@ const DiscountPopup = () => {
             const scrollY = window.scrollY;
             const windowHeight = window.innerHeight;
 
-            // Show popup after scrolling past the AppShowcase/features section
+            // Show popup after scrolling past the Overview section
             // and hide it when getting close to the pricing section.
             if (scrollY > featuresBottom - windowHeight / 2 && scrollY < pricingTop - windowHeight && !isDismissed) {
                 setIsVisible(true);
