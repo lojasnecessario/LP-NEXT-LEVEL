@@ -74,13 +74,13 @@ export default function RedirectPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                         {testimonials.map((testimonial) => (
-                            <div key={testimonial.id} className="relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl shadow-emerald-900/20 border border-white/10 group">
+                            <div key={testimonial.id} className="relative rounded-2xl overflow-hidden shadow-2xl shadow-emerald-900/20 group bg-white/5 border border-white/10 flex items-center justify-center">
                                 <img
                                     src={testimonial.image}
                                     alt={testimonial.alt}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                             </div>
                         ))}
                     </div>
