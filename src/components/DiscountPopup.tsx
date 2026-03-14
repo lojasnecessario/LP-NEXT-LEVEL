@@ -53,8 +53,8 @@ const DiscountPopup = () => {
                             <Tag className="w-5 h-5 text-emerald-400" />
                         </div>
                         <div className="flex-1 pt-1 pr-4">
-                            <h4 className="text-white font-bold mb-1 leading-tight text-[15px]">Você ganhou desconto!</h4>
-                            <p className="text-xs text-gray-400 leading-relaxed">De R$99,90 por apenas R$29,90 vitalício. Clique para resgatar agora.</p>
+                            <h4 className="text-white font-bold mb-1 leading-tight text-[15px]">Você ganhou 40% de desconto em todos os planos!</h4>
+                            <p className="text-xs text-gray-400 leading-relaxed">A partir de R$ 14,90/mês. Clique para resgatar agora.</p>
                         </div>
                         <button
                             onClick={(e) => {
