@@ -1,4 +1,4 @@
-import { Brain, LayoutDashboard, Trophy, Dumbbell, BookOpen, Calendar, Bell, Droplets } from 'lucide-react';
+import { Brain, Trophy, Dumbbell, Utensils } from 'lucide-react';
 import { motion } from 'motion/react';
 import { trackMetaEvent } from '../utils/metaPixel';
 
@@ -9,39 +9,19 @@ const features = [
         description: "Responda a um quiz detalhado (metas, dificuldades, horários) e a IA monta uma rotina diária milimetricamente calculada."
     },
     {
-        icon: LayoutDashboard,
-        title: "Dashboard Inteligente",
-        description: "Exibe as tarefas do dia de forma cronológica (Manhã, Tarde e Noite) para foco total."
-    },
-    {
         icon: Trophy,
         title: "Gamificação e Progresso (XP)",
-        description: "Ganhe pontos ao completar tarefas, beber água, treinar e ler. Suba de nível como em um videogame, mantendo a motivação alta."
+        description: "Ganhe pontos ao completar tarefas. Suba de nível como em um videogame e concorra a prêmios físicos exclusivos ao alcançar os combos de constância máxima."
+    },
+    {
+        icon: Utensils,
+        title: "A I.A faz sua dieta",
+        description: "A I.A calcula seu índice corporal e monta uma dieta única e personalizada focada na sua máxima performance física e mental."
     },
     {
         icon: Dumbbell,
         title: "Tracker de Treinos Avançado",
         description: "A I.A faz seu planejamento semanal de treinos, registro de exercícios, séries, repetições e conclusão diária."
-    },
-    {
-        icon: BookOpen,
-        title: "Tracker de Leitura",
-        description: "Acompanhamento de páginas lidas, sessões de leitura, metas semanais e espaço para notas/resumos."
-    },
-    {
-        icon: Calendar,
-        title: "Planner Semanal",
-        description: "Planejamento de metas para a semana com base na performance anterior, com visão em carrossel dinâmico."
-    },
-    {
-        icon: Bell,
-        title: "Notificações Inteligentes",
-        description: "Lembretes para beber água, treinar e relatórios diários enviados nos momentos certos (respeitando o horário de sono)."
-    },
-    {
-        icon: Droplets,
-        title: "Sistema de Hábitos",
-        description: "Controle de ingestão de água e consistência diária."
     }
 ];
 
@@ -56,7 +36,7 @@ const OverviewSection = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-black mb-6"
+                        className="text-4xl md:text-5xl font-black mb-6"
                     >
                         Tudo o que a <span className="text-emerald-400">Nossa I.A faz por você</span>
                     </motion.h2>
@@ -65,7 +45,7 @@ const OverviewSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-gray-400 text-lg max-w-2xl mx-auto"
+                        className="text-gray-400 text-xl max-w-2xl mx-auto font-medium"
                     >
                         Um ecossistema online completo para transformar a sua rotina, do momento em que acorda até a hora de dormir.
                     </motion.p>
@@ -79,13 +59,13 @@ const OverviewSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="glass p-6 rounded-3xl border-white/5 hover:border-emerald-500/30 transition-all duration-300 group"
+                            className="glass p-8 rounded-3xl border-emerald-500/10 hover:border-emerald-500/30 transition-all duration-300 group flex flex-col"
                         >
-                            <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20">
-                                <feat.icon className="w-6 h-6 text-emerald-500" />
+                            <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 border border-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.1)]">
+                                <feat.icon className="w-8 h-8 text-emerald-500" />
                             </div>
-                            <h3 className="text-lg font-bold mb-3 text-white">{feat.title}</h3>
-                            <p className="text-gray-400 text-sm leading-relaxed">
+                            <h3 className="text-xl font-bold mb-4 text-white group-hover:text-emerald-400 transition-colors">{feat.title}</h3>
+                            <p className="text-gray-400 text-base leading-relaxed font-medium">
                                 {feat.description}
                             </p>
                         </motion.div>
@@ -95,7 +75,7 @@ const OverviewSection = () => {
                 <div className="mt-16 text-center">
                     <button
                         onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "/redirect"; }}
-                        className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold transition-all active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]"
+                        className="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-2xl font-bold text-xl transition-all active:scale-95 shadow-[0_0_30px_rgba(16,185,129,0.4)] hover:shadow-[0_0_40px_rgba(16,185,129,0.5)] border border-emerald-400/20"
                     >
                         Quero a IA trabalhando por mim
                     </button>

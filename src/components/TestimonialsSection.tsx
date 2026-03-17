@@ -1,57 +1,41 @@
-import {
-  AlertTriangle, Activity, Play, ShieldCheck, Brain, Zap, Trophy, Dumbbell,
-  BookOpen, Calendar, Bell, Droplets, ChevronRight, CheckCircle2, Star,
-  ArrowRight, Lock, Book, Menu, X
-} from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
-import { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
 
 const TestimonialsSection = () => (
-  <>
-    {/* Testimonials */}
-    <section className="py-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-black text-center mb-16">Quem já está no <span className="text-emerald-400">Próximo Nível</span>.</h2>
+    <section className="py-12 bg-[#050505] overflow-hidden border-t border-white/5 relative">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[500px] bg-emerald-600/5 blur-[100px] rounded-full pointer-events-none" />
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              name: "Lucas Almeida",
-              role: "Estudante",
-              text: "O Next Level mudou completamente meu jogo. Eu costumava procrastinar 24h por dia. Hoje, minha rotina é automática e viciante.",
-              avatar: "/Image_fx (23).png"
-            },
-            {
-              name: "Mariana Costa",
-              role: "Social media",
-              text: "O sistema de XP é genial. Eu me sinto mal se não completo minhas tarefas de leitura e treino. Finalmente a consistência veio.",
-              avatar: "/Image_fx (24).png"
-            },
-            {
-              name: "Ricardo Silva",
-              role: "Atleta Amador",
-              text: "O tracker de treinos é o melhor que já usei. Simples, rápido e a IA ajusta meu descanso perfeitamente. Recomendo demais.",
-              avatar: "/Image_fx (25).png"
-            }
-          ].map((t, i) => (
-            <div key={i} className="glass p-8 rounded-2xl border-white/5">
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-emerald-500 text-emerald-500" />)}
-              </div>
-              <p className="text-gray-300 mb-8 italic">"{t.text}"</p>
-              <div className="flex items-center gap-4">
-                <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full border-2 border-emerald-500/30" />
-                <div>
-                  <p className="font-bold">{t.name}</p>
-                  <p className="text-xs text-gray-500 uppercase font-bold tracking-wider">{t.role}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <h2 className="text-4xl md:text-5xl font-black text-center mb-16 text-white">
+                Quem já está no <span className="text-emerald-400">Próximo Nível</span>.
+            </h2>
+
+            <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="max-w-4xl mx-auto rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(16,185,129,0.1)] bg-white/5"
+            >
+                {/* O usuário deve colocar a imagem nesta tag img */}
+                <img 
+                    src="/depoimentos.png" 
+                    alt="Depoimentos de usuários" 
+                    className="w-full h-auto object-cover"
+                    onError={(e) => {
+                        // Exibe um placeholder de estilo "Apple" caso a imagem falhe ao carregar
+                        (e.target as HTMLImageElement).style.display = 'none';
+                        const parent = (e.target as HTMLImageElement).parentElement;
+                        if (parent) {
+                            const placeholder = document.createElement('div');
+                            placeholder.className = 'w-full aspect-video flex flex-col items-center justify-center text-gray-500 bg-gradient-to-br from-white/5 to-transparent p-10 text-center';
+                            placeholder.innerHTML = '<span class="text-2xl font-bold mb-2">Imagem de Depoimentos</span><span class="text-sm">Substitua o arquivo "depoimentos.png" na pasta public</span>';
+                            parent.appendChild(placeholder);
+                        }
+                    }}
+                />
+            </motion.div>
         </div>
-      </div>
     </section>
-  </>
 );
 
 export default TestimonialsSection;

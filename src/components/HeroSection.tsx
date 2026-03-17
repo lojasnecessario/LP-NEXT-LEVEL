@@ -1,17 +1,12 @@
-import {
-  AlertTriangle, Activity, Play, ShieldCheck, Brain, Zap, Trophy, Dumbbell,
-  BookOpen, Calendar, Bell, Droplets, ChevronRight, CheckCircle2, Star,
-  ArrowRight, Lock, Book, Menu, X
-} from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
-import { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
 import { trackMetaEvent } from '../utils/metaPixel';
 
 const HeroSection = () => (
   <>
     {/* Hero Section */}
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-clip">
-      <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-emerald-600/10 blur-[120px] rounded-full -z-10" />
+    <section className="relative pt-24 pb-12 md:pt-40 md:pb-20 overflow-clip">
+      {/* Elemento de fundo estilo Apple (formas suaves e blur) */}
+      <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-br from-emerald-500/20 to-blue-500/20 blur-[120px] rounded-full -z-10" />
 
       <div className="max-w-7xl mx-auto px-6 text-center">
         <motion.div
@@ -19,23 +14,20 @@ const HeroSection = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block px-4 py-1.5 rounded-full glass text-emerald-400 text-xs font-bold tracking-widest uppercase mb-6 border border-emerald-500/20">
-            O Futuro da Performance Humana
-          </span>
-          <h1 className="text-5xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tight">
-            Você sabe que tem algo errado<br />
-            <span className="gradient-text">Mas não sabe como mudar.</span>
+          <h1 className="text-4xl md:text-7xl font-black mb-6 leading-tight tracking-tight px-2">
+            Pare de tentar, <span className="text-[#009966] drop-shadow-[0_0_10px_rgba(0,153,102,0.3)]">comece a executar</span>
           </h1>
-          <h2 className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Pare de viver no automático e comece a viver a vida que você sabe que pode alcançar. Veja como:
+          <h2 className="text-base md:text-lg text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed font-medium px-4">
+            A primeira I.A desenvolvida cientificamente capaz de transformar homens comuns em verdadeiras máquinas de produtividade e desempenho
           </h2>
 
           <div className="flex justify-center mt-6">
             <a
-              href="#overview"
-              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-xl font-bold transition-all active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]"
+              href="#como-funciona"
+              onClick={() => trackMetaEvent('InitiateCheckout')}
+              className="bg-emerald-600 hover:bg-emerald-500 text-white px-8 md:px-10 py-3.5 md:py-4 rounded-full font-bold transition-all active:scale-95 shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] border border-emerald-400/20 text-base md:text-lg"
             >
-              Pare de procrastinar com a ajuda da i.a
+              Veja como
             </a>
           </div>
 

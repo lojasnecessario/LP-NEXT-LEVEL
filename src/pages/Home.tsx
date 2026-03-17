@@ -1,20 +1,17 @@
 import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
-import ProblemAgitation from '../components/ProblemAgitation';
-import AppShowcase from '../components/AppShowcase';
-import OverviewSection from '../components/OverviewSection';
-import ScienceSection from '../components/ScienceSection';
+import AnnouncementTicker from '../components/AnnouncementTicker';
+import ChallengeSection from '../components/ChallengeSection';
+import ProblemSolutionSection from '../components/ProblemSolutionSection';
 import HowItWorksSection from '../components/HowItWorksSection';
-import WorkoutSection from '../components/WorkoutSection';
+import NoDownloadInfo from '../components/NoDownloadInfo';
+import MentorRomeoSection from '../components/MentorRomeoSection';
+import AppShowcase from '../components/AppShowcase';
 import TestimonialsSection from '../components/TestimonialsSection';
-import GuaranteeSection from '../components/GuaranteeSection';
 import PricingSection from '../components/PricingSection';
 import InstagramCTA from '../components/InstagramCTA';
 import Footer from '../components/Footer';
-import DiscountPopup from '../components/DiscountPopup';
-
-import PlatformInfoSection from '../components/PlatformInfoSection';
 
 export default function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,10 +27,14 @@ export default function Home() {
         <div className="min-h-screen bg-[#050505] text-white selection:bg-indigo-500/30">
             <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <HeroSection />
-            <ProblemAgitation />
-            <OverviewSection />
-            <PlatformInfoSection />
-
+            <AnnouncementTicker />
+            <ProblemSolutionSection />
+            <HowItWorksSection />
+            <NoDownloadInfo />
+            <MentorRomeoSection />
+            <ChallengeSection />
+            
+            {/* Seção intacta: Sua vida, organizada pela IA */}
             <section id="features" className="py-12 overflow-clip">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="text-center mb-16">
@@ -48,15 +49,10 @@ export default function Home() {
                 </div>
             </section>
 
-            <ScienceSection />
-            <HowItWorksSection />
-            <WorkoutSection />
             <TestimonialsSection />
-            <GuaranteeSection />
             <PricingSection />
             <InstagramCTA />
             <Footer />
-            <DiscountPopup />
         </div>
     );
 }
