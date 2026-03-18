@@ -2,15 +2,18 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import AnnouncementTicker from '../components/AnnouncementTicker';
-import ChallengeSection from '../components/ChallengeSection';
 import ProblemSolutionSection from '../components/ProblemSolutionSection';
-import HowItWorksSection from '../components/HowItWorksSection';
-import NoDownloadInfo from '../components/NoDownloadInfo';
+import NoExcusesSection from '../components/NoExcusesSection';
+import RoutineSection from '../components/RoutineSection';
+import BodyMindSection from '../components/BodyMindSection';
+import DietSection from '../components/DietSection';
 import MentorRomeoSection from '../components/MentorRomeoSection';
-import AppShowcase from '../components/AppShowcase';
-import TestimonialsSection from '../components/TestimonialsSection';
+import EvolutionSection from '../components/EvolutionSection';
 import PricingSection from '../components/PricingSection';
+import ChallengeSection from '../components/ChallengeSection';
+import FAQSection from '../components/FAQSection';
 import InstagramCTA from '../components/InstagramCTA';
+import FinalCTASection from '../components/FinalCTASection';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -24,34 +27,22 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#050505] text-white selection:bg-indigo-500/30">
+        <div className="min-h-screen bg-[#050505] text-white selection:bg-emerald-500/30">
             <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <HeroSection />
             <AnnouncementTicker />
             <ProblemSolutionSection />
-            <HowItWorksSection />
-            <NoDownloadInfo />
+            <NoExcusesSection />
+            <RoutineSection />
+            <BodyMindSection />
+            <DietSection />
             <MentorRomeoSection />
+            <EvolutionSection />
             <ChallengeSection />
-            
-            {/* Seção intacta: Sua vida, organizada pela IA */}
-            <section id="features" className="py-12 overflow-clip">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-6xl font-black mb-6">
-                            Sua vida, <span className="gradient-text">organizada pela IA</span>.
-                        </h2>
-                        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                            A primeira inteligência artificial de alta-performance que constrói sua rotina ideal e treinos personalizados.
-                        </p>
-                    </div>
-                    <AppShowcase />
-                </div>
-            </section>
-
-            <TestimonialsSection />
             <PricingSection />
+            <FAQSection />
             <InstagramCTA />
+            <FinalCTASection />
             <Footer />
         </div>
     );

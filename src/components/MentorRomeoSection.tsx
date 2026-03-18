@@ -1,61 +1,80 @@
 import { motion } from 'motion/react';
-import { Brain, Sparkles, ShieldCheck, Zap } from 'lucide-react';
 
 const MentorRomeoSection = () => {
     return (
-        <section className="py-8 bg-[#050505] relative overflow-hidden border-b border-white/5">
-            <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none" />
-            
-            <div className="max-w-4xl mx-auto px-6 relative z-10">
-                <div className="flex flex-col items-center">
-                    {/* Content */}
-                    <div className="w-full text-center overflow-hidden">
-                        <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 px-4 py-2 rounded-full mb-6">
-                            <Zap className="w-4 h-4 text-emerald-400" />
-                            <span className="text-xs font-black text-emerald-400 uppercase tracking-widest">Mentor Romeo I.A</span>
-                        </div>
+        <section className="py-12 relative bg-[#050505] overflow-hidden border-t border-white/5">
+            <div className="max-w-4xl mx-auto px-6 text-center">
+                <motion.h2 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tighter mb-12 leading-tight"
+                >
+                    Seu <span className="text-blue-500">mentor</span> inteligente
+                </motion.h2>
+
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                    className="relative w-full aspect-square bg-blue-950/20 rounded-2xl overflow-hidden shadow-[0_0_40px_rgba(59,130,246,0.1)] border border-blue-500/20 mb-8 mx-auto max-w-[180px] flex items-center justify-center"
+                >
+                    <div className="relative">
+                        <motion.div
+                            animate={{
+                                y: [0, -4, 0],
+                            }}
+                            transition={{
+                                duration: 5,
+                                repeat: Infinity,
+                                ease: "easeInOut",
+                            }}
+                            className="relative z-10"
+                        >
+                            <svg width="120" height="120" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="filter drop-shadow-[0_0_10px_rgba(59,130,246,0.3)]">
+                                {/* Robot Head Outer */}
+                                <rect x="40" y="50" width="120" height="100" rx="30" fill="#0A0A0A" stroke="#3b82f6" strokeWidth="2" />
+                                
+                                {/* Face Plate */}
+                                <rect x="55" y="65" width="90" height="70" rx="15" fill="#1A1A1A" stroke="#3b82f6" strokeWidth="1" strokeOpacity="0.3" />
+                                {/* Eyes */}
+                                <motion.circle 
+                                    cx="80" cy="95" r="8" fill="#3b82f6"
+                                    animate={{ scaleY: [1, 0.1, 1] }}
+                                    transition={{ duration: 0.2, repeat: Infinity, repeatDelay: 6 }}
+                                />
+                                <motion.circle 
+                                    cx="120" cy="95" r="8" fill="#3b82f6"
+                                    animate={{ scaleY: [1, 0.1, 1] }}
+                                    transition={{ duration: 0.2, repeat: Infinity, repeatDelay: 6 }}
+                                />
+                                {/* Mouth / Signal */}
+                                <rect x="85" y="115" width="30" height="4" rx="2" fill="#3b82f6" />
+                                {/* Antennas */}
+                                <line x1="100" y1="50" x2="100" y2="30" stroke="#3b82f6" strokeWidth="2" />
+                                <circle cx="100" cy="25" r="5" fill="#3b82f6" />
+                            </svg>
+                        </motion.div>
                         
-                        <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight px-4 md:px-0 tracking-tighter">
-                            Seu Mentor de <span className="text-emerald-400">Alta Performance</span>.
-                        </h2>
-                        
-                        <p className="text-gray-400 text-base md:text-lg mb-8 leading-relaxed font-medium max-w-2xl mx-auto px-6">
-                            Inteligência baseada em <span className="text-white">psicologia comportamental</span> e <span className="text-white">biologia do desempenho</span>. Hacks reais para sua atenção e foco.
-                        </p>
-                        
-                        {/* Auto-sliding features */}
-                        <div className="relative w-full overflow-hidden pb-4 flex justify-center">
-                            <motion.div 
-                                className="flex gap-4"
-                                animate={{ x: ["0%", "-50%"] }}
-                                transition={{ 
-                                    duration: 25, 
-                                    repeat: Infinity, 
-                                    ease: "linear" 
-                                }}
-                                style={{ width: "fit-content" }}
-                            >
-                                {[...Array(2)].map((_, groupIndex) => (
-                                    <div key={groupIndex} className="flex gap-4 shrink-0">
-                                        {[
-                                            { title: "Performance", desc: "Hackeie sua atenção/foco." },
-                                            { title: "Foco Neural", desc: "Entre em estado de Flow." },
-                                            { title: "Desenvolvimento", desc: "Elimine seus vícios reais." }
-                                        ].map((item, i) => (
-                                            <div key={`${groupIndex}-${i}`} className="w-[65vw] md:w-[280px] shrink-0 p-4 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-4 transition-colors">
-                                                <ShieldCheck className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
-                                                <div className="text-left">
-                                                    <h4 className="font-bold text-white text-sm mb-1">{item.title}</h4>
-                                                    <p className="text-gray-500 text-[11px] leading-snug">{item.desc}</p>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                ))}
-                            </motion.div>
-                        </div>
+                        {/* Background Pulsing Glow */}
+                        <motion.div 
+                            animate={{ opacity: [0.05, 0.15, 0.05] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute inset-0 bg-blue-500 blur-[60px] -z-10 rounded-full"
+                        />
                     </div>
-                </div>
+                </motion.div>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                    className="text-base md:text-lg text-gray-400 font-medium max-w-2xl mx-auto"
+                >
+                    O Romeo é a inteligencia artificial desenvolvida baseada em produtividade e foco. Peça dicas, sugestões, treinos para ele
+                </motion.p>
             </div>
         </section>
     );
