@@ -12,7 +12,6 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/obrigado" element={<ThankYou />} />
         <Route path="/quiz" element={<Quiz />} />
-        <Route path="/redirect" element={<RedirectPage />} />
       </Routes>
     </Router>
   );

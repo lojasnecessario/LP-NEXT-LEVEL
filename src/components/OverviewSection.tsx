@@ -74,7 +74,7 @@ const OverviewSection = () => {
 
                 <div className="mt-16 text-center">
                     <button
-                        onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "/redirect"; }}
+                        onClick={() => { trackMetaEvent('InitiateCheckout'); window.location.href = "https://pay.cakto.com.br/dj7mm52_776346"; }}
                         className="bg-emerald-600 hover:bg-emerald-500 text-white px-10 py-5 rounded-2xl font-bold text-xl transition-all active:scale-95 shadow-[0_0_30px_rgba(16,185,129,0.4)] hover:shadow-[0_0_40px_rgba(16,185,129,0.5)] border border-emerald-400/20"
                     >
                         Quero a IA trabalhando por mim

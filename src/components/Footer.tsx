@@ -40,7 +40,7 @@ const Footer = () => (
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-center md:text-left">
             <p>© 2026 Next Level AI. Todos os direitos reservados.</p>
             <span className="hidden md:inline text-gray-700">|</span>
-            <p>CNPJ: 00.000.000/0001-00</p>
+            <p>CNPJ: 61.560.000/0001-58</p>
             <span className="hidden md:inline text-gray-700">|</span>
             <p>Desenvolvido por Next Level Digital</p>
           </div>
