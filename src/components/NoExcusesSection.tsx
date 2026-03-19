@@ -35,7 +35,7 @@ const NoExcusesSection = () => {
                     transition={{ delay: 0.3 }}
                     className="text-base md:text-lg text-gray-400 font-medium max-w-2xl mx-auto"
                 >
-                    simples para usar, rápido e inteligente. Apenas execute e já transforme sua vida nos primeiros sete dias
+                    simples, rápido e inteligente. Apenas execute e transforme sua vida nos primeiros sete dias.
                 </motion.p>
             </div>
         </section>

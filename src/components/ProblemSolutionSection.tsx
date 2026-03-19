@@ -12,7 +12,7 @@ const ProblemSolutionSection = () => {
                     viewport={{ once: true }}
                     className="text-2xl md:text-4xl font-bold text-white uppercase tracking-tighter mb-10"
                 >
-                    Seu futuro depende da sua <span className="text-red-500">decisão</span>
+                    seu futuro depende da sua <span className="text-red-500">decisão</span>
                 </motion.h2>
 
                 <motion.div
@@ -25,7 +25,8 @@ const ProblemSolutionSection = () => {
                     <div className="hidden md:block absolute top-0 right-0 w-40 h-40 bg-indigo-500/10 blur-[50px] rounded-full pointer-events-none" />
                     
                     <p className="text-lg md:text-xl font-medium leading-relaxed text-gray-300">
-                        O unico aplicativo que não da espaço para você falhar e constrói rotina, treino e dieta com foco na sua performance
+                        O único sistema que não da espaço para você falhar.<br />
+                        Constrói sua rotina, treino e dieta com foco na sua performance.
                     </p>
                 </motion.div>
             </div>

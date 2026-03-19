@@ -35,7 +35,7 @@ const BodyMindSection = () => {
                     transition={{ delay: 0.3 }}
                     className="text-base md:text-lg text-gray-400 font-medium max-w-2xl mx-auto"
                 >
-                    Já treina ou quer treinar mas se sente perdido? A I.A gera seus treinos com exercicios, repetições e series
+                    já treina ou quer treinar mas se sente perdido? A I.A gera seus treinos com exercicios, repetições e séries.
                 </motion.p>
             </div>
         </section>
