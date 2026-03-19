@@ -18,7 +18,7 @@ const TestimonialsSection = () => (
             >
                 {/* O usuário deve colocar a imagem nesta tag img */}
                 <img 
-                    src="/provasocial.png" 
+                    src="/provasocial-v2.png" 
                     alt="Depoimentos de usuários" 
                     className="w-full h-auto object-cover"
                     onError={(e) => {

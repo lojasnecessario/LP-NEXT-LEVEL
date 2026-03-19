@@ -21,7 +21,7 @@ const EvolutionSection = () => {
                     className="relative w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-8 mx-auto"
                 >
                     <img 
-                        src="/provasocial.png" 
+                        src="/provasocial-v2.png" 
                         alt="Provas Sociais" 
                         className="w-full h-auto" 
                     />
