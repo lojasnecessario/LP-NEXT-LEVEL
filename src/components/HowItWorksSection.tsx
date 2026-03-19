@@ -77,7 +77,7 @@ const HowItWorksSection = () => {
             </div>
             
             {/* Decorative background light */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-64 bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
+            <div className="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-64 bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
         </section>
     );
 };

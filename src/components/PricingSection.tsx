@@ -29,12 +29,12 @@ const PricingSection = () => {
 
     const handleCheckout = () => {
         trackMetaEvent('InitiateCheckout', { currency: 'BRL', value: 29.90 });
-        window.location.href = 'https://pay.kiwify.com.br/hC9n4uM'; // GATEWAY PLACEHOLDER (Use original gateway if known, I'll use a placeholder or generic # for now)
+        window.location.href = 'https://pay.cakto.com.br/dj7mm52_776346'; // GATEWAY PLACEHOLDER (Use original gateway if known, I'll use a placeholder or generic # for now)
     };
 
     return (
         <section id="pricing" className="py-12 relative bg-[#050505] overflow-clip">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-br from-emerald-500/10 to-transparent blur-[120px] rounded-full pointer-events-none" />
+            <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-gradient-to-br from-emerald-500/10 to-transparent blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
                 <motion.h2 

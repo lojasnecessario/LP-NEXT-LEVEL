@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 const TestimonialsSection = () => (
     <section className="py-12 bg-[#050505] overflow-hidden border-t border-white/5 relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[500px] bg-emerald-600/5 blur-[100px] rounded-full pointer-events-none" />
+        <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[500px] bg-emerald-600/5 blur-[100px] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
             <h2 className="text-4xl md:text-5xl font-black text-center mb-16 text-white">

@@ -6,13 +6,13 @@ const FinalCTASection = () => {
     
     const handleCheckout = () => {
         trackMetaEvent('InitiateCheckout', { currency: 'BRL', value: 29.90 });
-        window.location.href = 'https://pay.kiwify.com.br/hC9n4uM'; // GATEWAY PLACEHOLDER
+        window.location.href = 'https://pay.cakto.com.br/dj7mm52_776346'; // GATEWAY PLACEHOLDER
     };
 
     return (
         <section className="py-12 relative bg-gradient-to-b from-[#0a0a0a] to-[#050505] overflow-clip flex flex-col items-center border-t border-white/5 text-center">
             
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-[150px] rounded-full pointer-events-none" />
+            <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/10 blur-[150px] rounded-full pointer-events-none" />
 
             <div className="max-w-4xl mx-auto px-6 relative z-10 w-full">
                 <motion.h2 

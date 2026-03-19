@@ -3,9 +3,9 @@ import { Target, Layers, Compass, BrainCircuit, AlertCircle } from 'lucide-react
 
 const ProblemAgitation = () => {
     return (
-        <section className="py-12 relative overflow-hidden bg-[#0a0a0a]">
+        <section id="problem" className="py-24 bg-[#050505] relative overflow-hidden border-t border-white/5">
             {/* Background elements */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[400px] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none" />
+            <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-[400px] bg-emerald-500/5 blur-[100px] rounded-full pointer-events-none" />
 
             <div className="max-w-4xl mx-auto px-6 relative z-10">
                 <motion.div
@@ -42,7 +42,7 @@ const ProblemAgitation = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-sm relative overflow-hidden"
                 >
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[80px] rounded-full pointer-events-none" />
+                    <div className="hidden md:block absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 blur-[80px] rounded-full pointer-events-none" />
 
                     <h3 className="text-2xl font-bold text-center mb-10 text-white">
                         Mas não te falta método, <span className="text-emerald-400">te falta:</span>

@@ -3,8 +3,8 @@ import { Trophy } from 'lucide-react';
 
 const ChallengeSection = () => {
     return (
-        <section className="py-12 relative bg-[#0a0a0a] overflow-hidden border-y border-white/5">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-96 bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none" />
+        <section className="py-12 relative bg-[#050505] overflow-clip border-y border-white/5">
+            <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-96 bg-emerald-500/10 blur-[100px] rounded-full pointer-events-none" />
             
             <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
                 <motion.div
