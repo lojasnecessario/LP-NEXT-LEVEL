@@ -24,6 +24,13 @@ const ProblemSolutionSection = () => {
                 >
                     <div className="hidden md:block absolute top-0 right-0 w-40 h-40 bg-indigo-500/10 blur-[50px] rounded-full pointer-events-none" />
                     
+                    <p className="text-lg md:text-xl font-medium leading-relaxed text-gray-300 mb-8">
+                        O único sistema que não da espaço para você falhar.<br />
+                        Constrói sua rotina, treino e dieta com foco na sua performance.
+                    </p>
+                    
+                    <div className="w-full h-px bg-white/5 my-8" />
+
                     <p className="text-lg md:text-xl font-bold uppercase tracking-tight text-white mb-6 leading-tight">
                         Para construir disciplina você precisa de:<br />
                         <span className="text-emerald-400">Hábitos e rotina; Treino; Dieta.</span>
