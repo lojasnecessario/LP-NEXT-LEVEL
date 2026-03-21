@@ -7,7 +7,6 @@ import NoExcusesSection from '../components/NoExcusesSection';
 import RoutineSection from '../components/RoutineSection';
 import BodyMindSection from '../components/BodyMindSection';
 import DietSection from '../components/DietSection';
-import MentorRomeoSection from '../components/MentorRomeoSection';
 import EvolutionSection from '../components/EvolutionSection';
 import PricingSection from '../components/PricingSection';
 import ChallengeSection from '../components/ChallengeSection';
@@ -36,7 +35,6 @@ export default function Home() {
             <RoutineSection />
             <BodyMindSection />
             <DietSection />
-            <MentorRomeoSection />
             <EvolutionSection />
             <ChallengeSection />
             <PricingSection />
