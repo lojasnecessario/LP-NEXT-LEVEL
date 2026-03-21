@@ -30,13 +30,13 @@ export default function Home() {
             <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <HeroSection />
             <AnnouncementTicker />
-            <ChallengeSection />
             <ProblemSolutionSection />
             <NoExcusesSection />
             <RoutineSection />
             <BodyMindSection />
             <DietSection />
             <EvolutionSection />
+            <ChallengeSection />
             <PricingSection />
             <FAQSection />
             <InstagramCTA />
