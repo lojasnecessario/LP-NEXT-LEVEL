@@ -8,10 +8,20 @@ const NoExcusesSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tighter mb-12"
+                    className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tighter mb-6"
                 >
-                    Plano, organização e execução
+                    <span className="text-emerald-400">Objetivos visíveis</span> que não permitem erros.
                 </motion.h2>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                    className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto mb-10 font-medium"
+                >
+                    Sua streak só continua se você concluir todos os dias sem falhar. Falhou? Volta pro dia zero.
+                </motion.p>
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
