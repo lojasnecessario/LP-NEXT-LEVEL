@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 const ProblemSolutionSection = () => {
     return (
-        <section id="solution" className="py-24 bg-[#0a0a0a] relative overflow-hidden">
+        <section id="solution" className="pt-10 pb-20 bg-[#0a0a0a] relative overflow-hidden">
             <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[500px] bg-gradient-to-r from-red-500/5 to-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-4xl mx-auto px-6 relative z-10 text-center flex flex-col items-center">
