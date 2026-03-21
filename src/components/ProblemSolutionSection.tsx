@@ -12,7 +12,7 @@ const ProblemSolutionSection = () => {
                     viewport={{ once: true }}
                     className="text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase tracking-tighter mb-10 max-w-3xl mx-auto"
                 >
-                    O sistema que transforma sua rotina em disciplina real
+                    O sistema que transforma sua rotina em <span className="text-emerald-400">disciplina real</span>
                 </motion.h2>
 
                 <motion.div
