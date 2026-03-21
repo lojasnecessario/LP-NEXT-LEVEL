@@ -10,9 +10,9 @@ const ProblemSolutionSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-2xl md:text-4xl font-bold text-white uppercase tracking-tighter mb-10"
+                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase tracking-tighter mb-10 max-w-3xl mx-auto"
                 >
-                    seu futuro depende da sua <span className="text-red-500">decisão</span>
+                    O sistema que transforma sua rotina em disciplina real
                 </motion.h2>
 
                 <motion.div
