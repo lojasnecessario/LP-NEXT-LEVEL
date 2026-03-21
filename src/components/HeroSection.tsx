@@ -11,8 +11,8 @@ const HeroSection = () => (
         transition={{ duration: 0.6 }}
         className="flex flex-col items-center"
       >
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight tracking-tight text-white uppercase px-2 max-w-3xl mx-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
-          RETOME O CONTROLE DA SUA VIDA
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight tracking-tight text-white uppercase px-2 max-w-4xl mx-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+          Pare de procrastinar e construa disciplina em 7 dias
         </h1>
 
         <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-medium px-4 mb-2">
