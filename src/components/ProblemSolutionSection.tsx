@@ -52,7 +52,7 @@ const ProblemSolutionSection = () => {
                     </div>
 
                     <p className="text-base md:text-lg font-medium leading-relaxed text-gray-400">
-                        E a nossa Inteligência artificial baseada em ciência de produtividade e disciplina constrói e planeja tudo pra você executar.
+                        E a nossa I.A de produtividade e performance constrói a rotina perfeita! <span className="text-emerald-400">Você só precisa executar</span>
                     </p>
                 </motion.div>
             </div>
