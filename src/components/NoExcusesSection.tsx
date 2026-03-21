@@ -10,7 +10,7 @@ const NoExcusesSection = () => {
                     viewport={{ once: true }}
                     className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tighter mb-12"
                 >
-                    SEM TEMPO PARA DESCULPAS IRMÃO
+                    Rotina inteligente e a prova de falhas
                 </motion.h2>
 
                 <motion.div
