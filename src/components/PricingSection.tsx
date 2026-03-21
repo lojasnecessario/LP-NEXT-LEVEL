@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { trackMetaEvent } from '../utils/metaPixel';
-import { ShieldCheck, Check } from 'lucide-react';
+import { ShieldCheck, Check, Lock, CheckCircle2 } from 'lucide-react';
 
 const PricingSection = () => {
     // Timer Logic 10 minutes (600 seconds)
@@ -101,9 +101,18 @@ const PricingSection = () => {
                         
                         <div className="flex flex-col items-center gap-2 text-sm text-gray-400 font-medium">
                             <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-500" /> pagamento unico nunca mais pague novamente</span>
-                            <span className="text-emerald-400 font-black text-lg md:text-xl uppercase tracking-wider drop-shadow-[0_0_15px_rgba(52,211,153,0.3)]">
+                            <span className="text-emerald-400 font-black text-lg md:text-xl uppercase tracking-wider drop-shadow-[0_0_15px_rgba(52,211,153,0.3)] mb-2">
                                 mudar de vida custa menos que um lanche
                             </span>
+                            
+                            <div className="flex items-center gap-6 mt-4 pt-4 border-t border-white/5 w-full justify-center">
+                                <span className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-gray-500 font-bold">
+                                    <Lock className="w-3.5 h-3.5 text-emerald-500" /> Compra Segura
+                                </span>
+                                <span className="flex items-center gap-1.5 text-xs uppercase tracking-wider text-gray-500 font-bold">
+                                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Site Verificado
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
