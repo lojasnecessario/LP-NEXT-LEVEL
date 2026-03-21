@@ -34,7 +34,7 @@ const RoutineSection = () => {
                     transition={{ delay: 0.3 }}
                     className="text-base md:text-lg text-gray-400 font-medium max-w-2xl mx-auto"
                 >
-                    sua rotina e hábitos precisam ser visiveis para que você pare de pensar no que fazer e comece a executar
+                    Sua rotina será construída de forma inteligente, respeitando seu cotidiano. Conclua seus objetivos, suba de nível e seja incentivado ganhando prêmios físicos.
                 </motion.p>
             </div>
         </section>
