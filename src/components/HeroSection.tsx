@@ -15,12 +15,7 @@ const HeroSection = () => (
           Pare de procrastinar e construa disciplina em 7 dias
         </h1>
 
-        <p className="text-base md:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-medium px-4 mb-2">
-          "se você não tomar uma atitude hoje, a unica coisa que vai mudar é o proporção do seu fracasso"
-        </p>
-        <p className="text-sm text-gray-500 font-bold uppercase tracking-widest opacity-60">
-          — David Goggins
-        </p>
+
 
       </motion.div>
     </div>
