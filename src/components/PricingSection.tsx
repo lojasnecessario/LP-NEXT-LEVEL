@@ -21,6 +21,7 @@ const PricingSection = () => {
         { name: "Dashboard com missões diárias, dias vencidos", value: "49,90" },
         { name: "Planner de Treinos personalizados", value: "99,90" },
         { name: "Controle da dieta", value: "29,90" },
+        { name: "Controle financeiro com assistente I.A", value: "49,90" },
         { name: "Controle de livros lidos", value: "19,90" },
         { name: "Recompensas fisicas", value: "19,90" },
         { name: "Atualizações do app", value: "79,90" },

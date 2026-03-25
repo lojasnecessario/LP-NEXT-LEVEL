@@ -21,8 +21,8 @@ const RoutineSection = () => {
                     className="relative w-full aspect-[4/5] md:aspect-video bg-emerald-950/20 rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(16,185,129,0.1)] border border-emerald-500/20 mb-10 mx-auto max-w-3xl flex items-center justify-center"
                 >
                     <img 
-                        src="/objetivos.gif" 
-                        alt="Disciplina e Organização" 
+                        src="/Planner.gif" 
+                        alt="Planner de Rotina Inteligente" 
                         className="w-full h-full object-cover"
                     />
                 </motion.div>

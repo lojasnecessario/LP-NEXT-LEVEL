@@ -14,6 +14,7 @@ import FAQSection from '../components/FAQSection';
 import InstagramCTA from '../components/InstagramCTA';
 import FinalCTASection from '../components/FinalCTASection';
 import Footer from '../components/Footer';
+import FinanceSection from '../components/FinanceSection';
 
 export default function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,6 +34,7 @@ export default function Home() {
             <ProblemSolutionSection />
             <NoExcusesSection />
             <RoutineSection />
+            <FinanceSection />
             <BodyMindSection />
             <DietSection />
             <EvolutionSection />

@@ -35,7 +35,7 @@ const DietSection = () => {
                     transition={{ delay: 0.3 }}
                     className="text-base md:text-lg text-gray-400 font-medium max-w-2xl mx-auto"
                 >
-                    Uma mente e um corpo forte precisam de uma alimentação correta e a nossa I.A faz tudo isso por você
+                    Uma mente e um corpo forte precisam de uma alimentação correta e a nossa I.A faz tudo isso por você, controle sua dieta registrando suas refeições
                 </motion.p>
             </div>
         </section>
