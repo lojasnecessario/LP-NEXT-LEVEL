@@ -57,11 +57,22 @@ export default function ThankYou() {
                                     </li>
                                     <li className="flex gap-4">
                                         <div className="w-8 h-8 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0 font-bold border border-purple-500/30">2</div>
-                                        <p className="text-gray-300">Siga as instruções para criar sua senha e baixar o aplicativo.</p>
+                                        <p className="text-gray-300">Procure pelo e-mail com nome <span className="text-purple-400 font-bold">"Next Level App"</span>, lá você irá encontrar o link para definir sua senha.</p>
                                     </li>
                                     <li className="flex gap-4">
                                         <div className="w-8 h-8 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center shrink-0 font-bold border border-pink-500/30">3</div>
+                                        <p className="text-gray-300">Siga as instruções para criar sua senha e baixar o aplicativo.</p>
+                                    </li>
+                                    <li className="flex gap-4">
+                                        <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 font-bold border border-emerald-500/30">4</div>
                                         <p className="text-gray-300">Aproveite sua nova vida organizada pela IA.</p>
+                                    </li>
+                                    <li className="flex gap-4">
+                                        <div className="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 font-bold border border-blue-500/30">5</div>
+                                        <p className="text-gray-300">
+                                            Salve o número do suporte (11) 91151-1339 ou {' '}
+                                            <a href="https://wa.me/5511911511339" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline font-bold">clique aqui</a>
+                                        </p>
                                     </li>
                                 </ul>
                             </div>
