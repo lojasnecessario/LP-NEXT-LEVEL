@@ -36,12 +36,27 @@ export default function ThankYou() {
                                 Parabéns pela decisão de elevar sua rotina para o próximo nível. O seu acesso ao Next Level chegará no seu e-mail em instantes.
                             </p>
 
-                            {/* Video Placeholder Area */}
+                            {/* Welcome Video */}
                             <div className="w-full aspect-video bg-black/40 rounded-2xl border border-white/10 mb-8 overflow-hidden relative group">
                                 <iframe
                                     className="absolute inset-0 w-full h-full"
                                     src="https://www.youtube.com/embed/X16Yyj3BWYE"
                                     title="Boas-vindas Next Level"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+
+                            {/* Tutorial: How to Install */}
+                            <div className="mb-4 text-left">
+                                <h3 className="font-bold text-lg text-white">Como instalar o aplicativo:</h3>
+                            </div>
+                            <div className="w-full aspect-[9/16] max-w-[300px] mx-auto bg-black/40 rounded-2xl border border-white/10 mb-8 overflow-hidden relative group">
+                                <iframe
+                                    className="absolute inset-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/lST1lMqkz94"
+                                    title="Como instalar o aplicativo"
                                     frameBorder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowFullScreen
@@ -61,14 +76,23 @@ export default function ThankYou() {
                                     </li>
                                     <li className="flex gap-4">
                                         <div className="w-8 h-8 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center shrink-0 font-bold border border-pink-500/30">3</div>
-                                        <p className="text-gray-300">Siga as instruções para criar sua senha e baixar o aplicativo.</p>
+                                        <p className="text-gray-300">Siga as instruções para criar sua senha e acessar o aplicativo.</p>
                                     </li>
                                     <li className="flex gap-4">
                                         <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 font-bold border border-emerald-500/30">4</div>
+                                        <div className="flex flex-col gap-2">
+                                            <p className="text-gray-300">Após login adicione o Next Level nos favoritos do seu navegador ou coloque o app no seu menu iniciar do celular.</p>
+                                            <span className="text-emerald-400 text-sm font-bold cursor-pointer hover:underline inline-flex items-center gap-1">
+                                                Como colocar no menu iniciar
+                                            </span>
+                                        </div>
+                                    </li>
+                                    <li className="flex gap-4">
+                                        <div className="w-8 h-8 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center shrink-0 font-bold border border-orange-500/30">5</div>
                                         <p className="text-gray-300">Aproveite sua nova vida organizada pela IA.</p>
                                     </li>
                                     <li className="flex gap-4">
-                                        <div className="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 font-bold border border-blue-500/30">5</div>
+                                        <div className="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 font-bold border border-blue-500/30">6</div>
                                         <p className="text-gray-300">
                                             Salve o número do suporte (11) 91151-1339 ou {' '}
                                             <a href="https://wa.me/5511911511339" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline font-bold">clique aqui</a>
