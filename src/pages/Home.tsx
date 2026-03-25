@@ -16,6 +16,7 @@ import FinalCTASection from '../components/FinalCTASection';
 import Footer from '../components/Footer';
 import FinanceSection from '../components/FinanceSection';
 import DiscountPopup from '../components/DiscountPopup';
+import ReleaseNotification from '../components/ReleaseNotification';
 
 export default function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,6 +39,7 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-[#050505] text-white selection:bg-emerald-500/30">
+            <ReleaseNotification isVisible={showRest} />
             {showRest && (
                 <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             )}
