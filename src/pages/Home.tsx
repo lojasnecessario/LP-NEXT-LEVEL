@@ -15,35 +15,54 @@ import InstagramCTA from '../components/InstagramCTA';
 import FinalCTASection from '../components/FinalCTASection';
 import Footer from '../components/Footer';
 import FinanceSection from '../components/FinanceSection';
+import DiscountPopup from '../components/DiscountPopup';
 
 export default function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [showRest, setShowRest] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        const timer = setTimeout(() => {
+            setShowRest(true);
+        }, 30000); // 30 seconds
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            clearTimeout(timer);
+        };
     }, []);
 
     return (
         <div className="min-h-screen bg-[#050505] text-white selection:bg-emerald-500/30">
-            <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+            {showRest && (
+                <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+            )}
+            
             <HeroSection />
-            <AnnouncementTicker />
-            <ProblemSolutionSection />
-            <NoExcusesSection />
-            <RoutineSection />
-            <FinanceSection />
-            <BodyMindSection />
-            <DietSection />
-            <EvolutionSection />
-            <ChallengeSection />
-            <PricingSection />
-            <FAQSection />
-            <InstagramCTA />
-            <FinalCTASection />
-            <Footer />
+
+            {showRest && (
+                <>
+                    <AnnouncementTicker />
+                    <ProblemSolutionSection />
+                    <NoExcusesSection />
+                    <RoutineSection />
+                    <FinanceSection />
+                    <BodyMindSection />
+                    <DietSection />
+                    <EvolutionSection />
+                    <ChallengeSection />
+                    <PricingSection />
+                    <FAQSection />
+                    <InstagramCTA />
+                    <FinalCTASection />
+                    <Footer />
+                    <DiscountPopup />
+                </>
+            )}
         </div>
     );
 }

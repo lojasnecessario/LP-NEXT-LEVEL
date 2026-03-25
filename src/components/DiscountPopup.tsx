@@ -8,17 +8,18 @@ const DiscountPopup = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            // Find elements to base scroll position on
-            const featuresEl = document.getElementById('overview');
+            const dietEl = document.getElementById('diet-section');
             const pricingEl = document.getElementById('pricing');
 
-            const featuresBottom = featuresEl ? featuresEl.offsetTop + featuresEl.offsetHeight : 1500;
+            if (!dietEl) return;
+
+            const dietTop = dietEl.offsetTop;
             const pricingTop = pricingEl ? pricingEl.offsetTop : Infinity;
             const scrollY = window.scrollY;
             const windowHeight = window.innerHeight;
 
-            // Show popup when scrolling into the end of the Overview section
-            if (scrollY > featuresBottom - windowHeight && scrollY < pricingTop - windowHeight && !isDismissed) {
+            // Show popup when Diet section is in view
+            if (scrollY > dietTop - windowHeight + 100 && scrollY < pricingTop - 50 && !isDismissed) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
@@ -26,7 +27,6 @@ const DiscountPopup = () => {
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
-        // Check initially
         handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
     }, [isDismissed]);
@@ -53,8 +53,8 @@ const DiscountPopup = () => {
                             <Tag className="w-5 h-5 text-emerald-400" />
                         </div>
                         <div className="flex-1 pt-1 pr-4">
-                            <h4 className="text-white font-bold mb-1 leading-tight text-[15px]">Você ganhou 40% de desconto em todos os planos!</h4>
-                            <p className="text-xs text-gray-400 leading-relaxed">A partir de R$ 14,90/mês. Clique para resgatar agora.</p>
+                            <h4 className="text-white font-bold mb-1 leading-tight text-[15px]">Você acaba de ganhar um desconto exclusivo!</h4>
+                            <p className="text-xs text-gray-400 leading-relaxed">De R$ 99,90 por <span className="text-emerald-400 font-bold">APENAS R$ 29,90</span>. Clique para resgatar agora.</p>
                         </div>
                         <button
                             onClick={(e) => {
