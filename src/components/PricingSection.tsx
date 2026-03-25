@@ -25,7 +25,6 @@ const PricingSection = () => {
         { name: "Controle de livros lidos", value: "19,90" },
         { name: "Recompensas fisicas", value: "19,90" },
         { name: "Atualizações do app", value: "79,90" },
-        { name: "Mentor Romeo 24hrs por dia", value: "49,90" },
     ];
 
     const handleCheckout = () => {
@@ -76,7 +75,7 @@ const PricingSection = () => {
                     </ul>
 
                     <div className="border-t border-white/10 pt-8 text-center">
-                        <p className="text-gray-400 text-lg mb-2">de <span className="line-through decoration-red-500 text-gray-500">R$ 448,30</span> por apenas:</p>
+                        <p className="text-gray-400 text-lg mb-2">de <span className="line-through decoration-red-500 text-gray-500">R$ 398,40</span> por apenas:</p>
                         
                         <div className="flex justify-center items-baseline gap-2 mb-6">
                             <span className="text-5xl md:text-7xl font-black text-white">29,90</span>
