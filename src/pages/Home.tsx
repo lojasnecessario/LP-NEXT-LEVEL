@@ -20,49 +20,36 @@ import DiscountPopup from '../components/DiscountPopup';
 export default function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
-    const [showRest, setShowRest] = useState(false);
-
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
 
-        const timer = setTimeout(() => {
-            setShowRest(true);
-        }, 30000); // 30 seconds
-
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            clearTimeout(timer);
         };
     }, []);
 
     return (
         <div className="min-h-screen bg-[#050505] text-white selection:bg-emerald-500/30">
-            {showRest && (
-                <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-            )}
+            <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             
             <HeroSection />
 
-            {showRest && (
-                <>
-                    <AnnouncementTicker />
-                    <ProblemSolutionSection />
-                    <NoExcusesSection />
-                    <RoutineSection />
-                    <FinanceSection />
-                    <BodyMindSection />
-                    <DietSection />
-                    <EvolutionSection />
-                    <ChallengeSection />
-                    <PricingSection />
-                    <FAQSection />
-                    <InstagramCTA />
-                    <FinalCTASection />
-                    <Footer />
-                    <DiscountPopup />
-                </>
-            )}
+            <AnnouncementTicker />
+            <ProblemSolutionSection />
+            <NoExcusesSection />
+            <RoutineSection />
+            <FinanceSection />
+            <BodyMindSection />
+            <DietSection />
+            <EvolutionSection />
+            <ChallengeSection />
+            <PricingSection />
+            <FAQSection />
+            <InstagramCTA />
+            <FinalCTASection />
+            <Footer />
+            <DiscountPopup />
         </div>
     );
 }
