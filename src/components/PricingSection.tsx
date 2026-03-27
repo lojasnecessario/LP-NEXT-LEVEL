@@ -80,7 +80,7 @@ const PricingSection = () => {
                         <div className="flex justify-center items-baseline gap-2 mb-6">
                             <span className="text-5xl md:text-7xl font-black text-white">29,90</span>
                         </div>
-                        <p className="text-emerald-400 font-bold mb-8">ou 6x de R$ 4,98</p>
+                        <p className="text-emerald-400 font-bold mb-8">ou 6x de R$ 5,87</p>
 
                         {/* Timer */}
                         <div className="mb-8">
@@ -99,8 +99,14 @@ const PricingSection = () => {
                             garantir acesso vitálicio
                         </button>
                         
+                        <div className="flex flex-col items-center gap-2 text-sm text-gray-400 font-medium mb-8">
+                            <span className="flex items-center gap-2 uppercase tracking-widest text-[10px] font-bold">
+                                <ShieldCheck className="w-4 h-4 text-emerald-500" /> pagamento unico • nunca mais pague novamente
+                            </span>
+                        </div>
+
                         {/* 7-Day Guarantee */}
-                        <div className="flex items-center justify-center gap-4 py-4 px-6 bg-emerald-500/5 border border-emerald-500/20 rounded-2xl mb-6">
+                        <div className="flex items-center justify-center gap-4 py-4 px-6 bg-emerald-500/5 border border-emerald-500/20 rounded-2xl mb-8">
                             <div className="bg-emerald-500/10 p-2.5 rounded-full flex-shrink-0">
                                 <ShieldCheck className="w-8 h-8 text-emerald-500" />
                             </div>
@@ -111,7 +117,6 @@ const PricingSection = () => {
                         </div>
                         
                         <div className="flex flex-col items-center gap-2 text-sm text-gray-400 font-medium">
-                            <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-500" /> pagamento unico nunca mais pague novamente</span>
                             <span className="text-emerald-400 font-black text-lg md:text-xl uppercase tracking-wider drop-shadow-[0_0_15px_rgba(52,211,153,0.3)] mb-2">
                                 mudar de vida custa menos que um lanche
                             </span>

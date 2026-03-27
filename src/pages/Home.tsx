@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
-import AnnouncementTicker from '../components/AnnouncementTicker';
 import ProblemSolutionSection from '../components/ProblemSolutionSection';
 import NoExcusesSection from '../components/NoExcusesSection';
 import RoutineSection from '../components/RoutineSection';
@@ -9,12 +8,13 @@ import BodyMindSection from '../components/BodyMindSection';
 import DietSection from '../components/DietSection';
 import EvolutionSection from '../components/EvolutionSection';
 import PricingSection from '../components/PricingSection';
-import ChallengeSection from '../components/ChallengeSection';
 import FAQSection from '../components/FAQSection';
 import InstagramCTA from '../components/InstagramCTA';
 import FinalCTASection from '../components/FinalCTASection';
 import Footer from '../components/Footer';
 import FinanceSection from '../components/FinanceSection';
+import ComparisonSection from '../components/ComparisonSection';
+import StepByStepSection from '../components/StepByStepSection';
 import DiscountPopup from '../components/DiscountPopup';
 
 export default function Home() {
@@ -35,15 +35,15 @@ export default function Home() {
             
             <HeroSection />
 
-            <AnnouncementTicker />
             <ProblemSolutionSection />
+            <ComparisonSection />
             <NoExcusesSection />
             <RoutineSection />
             <FinanceSection />
             <BodyMindSection />
             <DietSection />
+            <StepByStepSection />
             <EvolutionSection />
-            <ChallengeSection />
             <PricingSection />
             <FAQSection />
             <InstagramCTA />

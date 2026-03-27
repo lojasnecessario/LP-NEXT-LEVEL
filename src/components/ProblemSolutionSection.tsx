@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 const ProblemSolutionSection = () => {
     return (
-        <section id="solution" className="pt-10 pb-20 bg-[#0a0a0a] relative overflow-hidden">
+        <section id="solution" className="py-12 bg-[#0a0a0a] relative overflow-hidden">
             <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-5xl h-[500px] bg-gradient-to-r from-red-500/5 to-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-4xl mx-auto px-6 relative z-10 text-center flex flex-col items-center">
@@ -10,9 +10,9 @@ const ProblemSolutionSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase tracking-tighter mb-10 max-w-3xl mx-auto"
+                    className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter mb-8 max-w-4xl mx-auto leading-[0.9]"
                 >
-                    O sistema que transforma sua rotina em <span className="text-emerald-400">disciplina real</span>
+                    Construa <span className="text-emerald-400 drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]">disciplina real</span> em 7 dias
                 </motion.h2>
 
                 <motion.div
@@ -20,65 +20,42 @@ const ProblemSolutionSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
-                    className="glass p-8 md:p-12 rounded-[2rem] border-white/10 text-center max-w-3xl relative overflow-hidden"
+                    className="glass p-8 md:p-16 rounded-[3rem] border-white/10 text-center max-w-4xl relative overflow-hidden w-full"
                 >
-                    <div className="hidden md:block absolute top-0 right-0 w-40 h-40 bg-indigo-500/10 blur-[50px] rounded-full pointer-events-none" />
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent" />
+                    <div className="hidden md:block absolute -top-24 -right-24 w-64 h-64 bg-emerald-500/10 blur-[80px] rounded-full pointer-events-none" />
                     
-                    <p className="text-lg md:text-xl font-medium leading-relaxed text-gray-300 mb-8">
-                        O único sistema que não da espaço para você falhar.<br />
-                        Constrói sua rotina, treino e dieta com foco na sua performance.
-                    </p>
-                    
-                    <div className="w-full h-px bg-white/5 my-8" />
+                    <div className="relative z-10 space-y-10">
+                        <div className="flex flex-col items-center gap-2 md:gap-4">
+                            <p className="text-xl md:text-3xl lg:text-4xl font-black text-white uppercase tracking-tight">
+                                <span className="text-red-500">Sem</span> achismos
+                            </p>
+                            <p className="text-xl md:text-3xl lg:text-4xl font-black text-white uppercase tracking-tight">
+                                <span className="text-red-500">Sem</span> metodologia fraca
+                            </p>
+                            <p className="text-xl md:text-3xl lg:text-4xl font-black text-white uppercase tracking-tight">
+                                <span className="text-red-500">Sem</span> milhões de planilhas para preencher
+                            </p>
+                            
+                            <div className="w-24 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent mt-6" />
 
-                    <p className="text-lg md:text-xl font-bold uppercase tracking-tight text-white mb-6 leading-tight text-center">
-                        Para construir disciplina você precisa de:
-                    </p>
+                            <p className="text-lg md:text-2xl font-medium leading-relaxed text-gray-300 max-w-3xl mx-auto">
+                                Nós criamos o <span className="text-white font-bold underline decoration-emerald-500/50 underline-offset-8">primeiro sistema com I.A integrada</span> baseado em neurociência e produtividade para você parar de tentar e finalmente conseguir.
+                            </p>
+                        </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 w-full max-w-4xl mx-auto mb-10">
-                        {['Hábitos e rotina', 'Treino', 'Dieta', 'Controle de finanças'].map((item, i) => (
-                           <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.2 + i * 0.1 }}
-                                className="flex items-center gap-3 bg-white/5 px-4 py-3 rounded-xl border border-white/5 text-left"
-                           >
-                                <div className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
-                                <span className="text-xs font-bold text-gray-200 uppercase tracking-widest">{item}</span>
-                           </motion.div>
-                        ))}
-                    </div>
-
-                    {/* Animated AI Highlight Block */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                        className="relative p-6 md:p-8 rounded-2xl bg-emerald-500/5 border border-emerald-500/20 shadow-[0_0_30px_rgba(16,185,129,0.05)] overflow-hidden group"
-                    >
                         <motion.div 
-                            animate={{ 
-                                opacity: [0.1, 0.3, 0.1],
-                            }}
-                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute inset-0 bg-emerald-500/10 pointer-events-none"
-                        />
-                        
-                        <p className="text-lg md:text-xl font-bold text-white leading-tight relative z-10">
-                            E a nossa I.A de <span className="text-emerald-400">produtividade e performance</span> constrói a rotina perfeita!
-                        </p>
-                        
-                        <motion.div 
-                            className="mt-4 inline-block px-6 py-2 bg-emerald-500 text-black font-black uppercase text-sm md:text-base rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.3)] group-hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-shadow"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            whileInView={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 0.4 }}
+                            className="pt-4"
                         >
-                            Você só precisa executar
+                            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs md:text-sm font-black uppercase tracking-[0.2em] shadow-[0_0_20px_rgba(16,185,129,0.1)]">
+                                <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                                Alta Performance Neurocientífica
+                            </div>
                         </motion.div>
-                    </motion.div>
+                    </div>
                 </motion.div>
             </div>
         </section>
