@@ -35,7 +35,7 @@ const ProblemSolutionSection = () => {
                         Para construir disciplina você precisa de:
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 w-full max-w-4xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 w-full max-w-4xl mx-auto mb-10">
                         {['Hábitos e rotina', 'Treino', 'Dieta', 'Controle de finanças'].map((item, i) => (
                            <motion.div
                                 key={i}
@@ -50,6 +50,35 @@ const ProblemSolutionSection = () => {
                            </motion.div>
                         ))}
                     </div>
+
+                    {/* Animated AI Highlight Block */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="relative p-6 md:p-8 rounded-2xl bg-emerald-500/5 border border-emerald-500/20 shadow-[0_0_30px_rgba(16,185,129,0.05)] overflow-hidden group"
+                    >
+                        <motion.div 
+                            animate={{ 
+                                opacity: [0.1, 0.3, 0.1],
+                            }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute inset-0 bg-emerald-500/10 pointer-events-none"
+                        />
+                        
+                        <p className="text-lg md:text-xl font-bold text-white leading-tight relative z-10">
+                            E a nossa I.A de <span className="text-emerald-400">produtividade e performance</span> constrói a rotina perfeita!
+                        </p>
+                        
+                        <motion.div 
+                            className="mt-4 inline-block px-6 py-2 bg-emerald-500 text-black font-black uppercase text-sm md:text-base rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.3)] group-hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-shadow"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            Você só precisa executar
+                        </motion.div>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>

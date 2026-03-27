@@ -15,7 +15,6 @@ import InstagramCTA from '../components/InstagramCTA';
 import FinalCTASection from '../components/FinalCTASection';
 import Footer from '../components/Footer';
 import FinanceSection from '../components/FinanceSection';
-import PerfectRoutineSection from '../components/PerfectRoutineSection';
 import DiscountPopup from '../components/DiscountPopup';
 
 export default function Home() {
@@ -38,7 +37,6 @@ export default function Home() {
 
             <AnnouncementTicker />
             <ProblemSolutionSection />
-            <PerfectRoutineSection />
             <NoExcusesSection />
             <RoutineSection />
             <FinanceSection />
