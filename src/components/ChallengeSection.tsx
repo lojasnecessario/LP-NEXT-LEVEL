@@ -23,7 +23,7 @@ const ChallengeSection = () => {
                     transition={{ delay: 0.1 }}
                     className="text-2xl md:text-3xl font-bold text-white uppercase tracking-tighter mb-6 leading-tight"
                 >
-                    participe do desafio <span className="whitespace-nowrap">sangue verde neon</span> 30 dias e concorra a <span className="text-emerald-400">150 reais</span>
+                    participe do <span className="whitespace-nowrap">desafio 30 dias</span> e concorra a <span className="text-emerald-400">150 reais</span>
                 </motion.h2>
  
                 <motion.p

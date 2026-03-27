@@ -99,6 +99,17 @@ const PricingSection = () => {
                             garantir acesso vitálicio
                         </button>
                         
+                        {/* 7-Day Guarantee */}
+                        <div className="flex items-center justify-center gap-4 py-4 px-6 bg-emerald-500/5 border border-emerald-500/20 rounded-2xl mb-6">
+                            <div className="bg-emerald-500/10 p-2.5 rounded-full flex-shrink-0">
+                                <ShieldCheck className="w-8 h-8 text-emerald-500" />
+                            </div>
+                            <div className="text-left">
+                                <p className="text-white font-bold text-lg leading-tight uppercase tracking-tight">Garantia Incondicional de 7 Dias</p>
+                                <p className="text-gray-400 text-sm">Teste o app completo por 7 dias. Se não gostar, devolvemos 100% do seu dinheiro direto na sua conta.</p>
+                            </div>
+                        </div>
+                        
                         <div className="flex flex-col items-center gap-2 text-sm text-gray-400 font-medium">
                             <span className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-500" /> pagamento unico nunca mais pague novamente</span>
                             <span className="text-emerald-400 font-black text-lg md:text-xl uppercase tracking-wider drop-shadow-[0_0_15px_rgba(52,211,153,0.3)] mb-2">

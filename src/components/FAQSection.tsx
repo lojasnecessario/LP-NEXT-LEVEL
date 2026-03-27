@@ -12,7 +12,7 @@ const faqs = [
         answer: "Não! O aplicativo é web-based (PWA), o que significa que assim que o pagamento for aprovado, você receberá acesso imediato no seu e-mail e poderá adicionar um ícone na tela inicial do seu celular em segundos, sem consumir armazenamento."
     },
     {
-        question: <>Como funciona o Desafio <span className="whitespace-nowrap">Sangue Verde Neon</span>?</>,
+        question: <>Como funciona o Desafio <span className="whitespace-nowrap">30 Dias</span>?</>,
         answer: "Ao usar o app por 30 dias consecutivos sem falhar (cumprindo suas missões diárias de rotina e treino), você entra automaticamente no sorteio para concorrer a R$ 150,00 como recompensa pela sua disciplina."
     },
     {

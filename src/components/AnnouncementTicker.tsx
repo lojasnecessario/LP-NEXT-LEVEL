@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 
 const AnnouncementTicker = () => {
-    const text = <>participe do desafio <span className="whitespace-nowrap">sangue verde neon</span> 30 dias e concorra a 150 reais</>;
+    const text = <>participe do desafio <span className="whitespace-nowrap">30 dias</span> e concorra a 150 reais</>;
     
     return (
         <div className="bg-emerald-500/10 border-y border-emerald-500/20 py-2.5 overflow-hidden relative">
