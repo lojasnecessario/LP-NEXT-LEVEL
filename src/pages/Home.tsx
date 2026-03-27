@@ -38,9 +38,9 @@ export default function Home() {
 
             <AnnouncementTicker />
             <ProblemSolutionSection />
+            <PerfectRoutineSection />
             <NoExcusesSection />
             <RoutineSection />
-            <PerfectRoutineSection />
             <FinanceSection />
             <BodyMindSection />
             <DietSection />

@@ -35,7 +35,7 @@ const ProblemSolutionSection = () => {
                         Para construir disciplina você precisa de:
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-10 w-full max-w-4xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 w-full max-w-4xl mx-auto">
                         {['Hábitos e rotina', 'Treino', 'Dieta', 'Controle de finanças'].map((item, i) => (
                            <motion.div
                                 key={i}
@@ -50,10 +50,6 @@ const ProblemSolutionSection = () => {
                            </motion.div>
                         ))}
                     </div>
-
-                    <p className="text-base md:text-lg font-medium leading-relaxed text-gray-400">
-                        E a nossa I.A de produtividade e performance constrói a rotina perfeita! <span className="text-emerald-400">Você só precisa executar</span>
-                    </p>
                 </motion.div>
             </div>
         </section>
