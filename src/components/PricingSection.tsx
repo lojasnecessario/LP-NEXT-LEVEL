@@ -28,7 +28,7 @@ const PricingSection = () => {
     ];
 
     const handleCheckout = () => {
-        trackMetaEvent('InitiateCheckout', { currency: 'BRL', value: 29.90 });
+        trackMetaEvent('InitiateCheckout', { currency: 'BRL', value: 29.99 });
         window.location.href = 'https://pay.cakto.com.br/dj7mm52_776346'; // GATEWAY PLACEHOLDER (Use original gateway if known, I'll use a placeholder or generic # for now)
     };
 
@@ -78,9 +78,9 @@ const PricingSection = () => {
                         <p className="text-gray-400 text-lg mb-2">de <span className="line-through decoration-red-500 text-gray-500">R$ 398,40</span> por apenas:</p>
                         
                         <div className="flex justify-center items-baseline gap-2 mb-6">
-                            <span className="text-5xl md:text-7xl font-black text-white">29,90</span>
+                            <span className="text-5xl md:text-7xl font-black text-white">29,99</span>
                         </div>
-                        <p className="text-emerald-400 font-bold mb-8">ou 6x de R$ 5,87</p>
+                        <p className="text-emerald-400 font-bold mb-8">ou 6x de R$ 5,89</p>
 
                         {/* Timer */}
                         <div className="mb-8">
