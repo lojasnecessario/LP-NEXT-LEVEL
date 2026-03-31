@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 const HeroSection = () => {
   useEffect(() => {
     var s = document.createElement("script");
-    s.src = "https://scripts.converteai.net/d6c609ef-60e9-4618-8522-87e9909e1a21/players/69c2cde4449496c3a0aff730/v4/player.js";
+    s.src = "https://scripts.converteai.net/d6c609ef-60e9-4618-8522-87e9909e1a21/players/69cbb84dc602028f65c5cad6/v4/player.js";
     s.async = !0;
     document.head.appendChild(s);
   }, []);
@@ -25,7 +25,7 @@ const HeroSection = () => {
           </h1>
 
           {/* @ts-ignore */}
-          <vturb-smartplayer id="vid-69c2cde4449496c3a0aff730" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
+          <vturb-smartplayer id="vid-69cbb84dc602028f65c5cad6" style={{ display: 'block', margin: '0 auto', width: '100%', maxWidth: '400px' }}></vturb-smartplayer>
         </motion.div>
       </div>
     </section>
