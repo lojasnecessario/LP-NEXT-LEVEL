@@ -15,6 +15,7 @@ import Footer from '../components/Footer';
 import FinanceSection from '../components/FinanceSection';
 import ComparisonSection from '../components/ComparisonSection';
 import StepByStepSection from '../components/StepByStepSection';
+import PerformanceSection from '../components/PerformanceSection';
 import DiscountPopup from '../components/DiscountPopup';
 
 export default function Home() {
@@ -39,9 +40,10 @@ export default function Home() {
             <ComparisonSection />
             <NoExcusesSection />
             <RoutineSection />
-            <FinanceSection />
+            <PerformanceSection />
             <BodyMindSection />
             <DietSection />
+            <FinanceSection />
             <StepByStepSection />
             <EvolutionSection />
             <PricingSection />

@@ -12,10 +12,15 @@ const FinanceSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 mb-8"
+                    className="flex flex-col items-center gap-4 mb-8"
                 >
-                    <DollarSign className="w-4 h-4 text-emerald-500" />
-                    <span className="text-emerald-500 text-xs font-bold uppercase tracking-widest">Controle Financeiro</span>
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                        <DollarSign className="w-4 h-4 text-emerald-500" />
+                        <span className="text-emerald-500 text-xs font-bold uppercase tracking-widest">Controle Financeiro</span>
+                    </div>
+                    <div className="inline-block px-3 py-1 rounded bg-emerald-500 text-black text-[10px] font-black uppercase tracking-tighter animate-pulse">
+                        Bônus Gratuito (Apenas esta semana)
+                    </div>
                 </motion.div>
 
                 <motion.h2 
@@ -25,21 +30,23 @@ const FinanceSection = () => {
                     transition={{ delay: 0.1 }}
                     className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter mb-12 leading-tight"
                 >
-                    Controle financeiro com <span className="text-emerald-500">Assistente I.A</span>
+                    Receba de <span className="text-emerald-500">Bônus</span> o Controle financeiro com <span className="text-emerald-500">Assistente I.A</span>
                 </motion.h2>
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="relative w-full aspect-[4/5] md:aspect-video bg-zinc-900/50 rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-10 mx-auto max-w-3xl flex items-center justify-center group"
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5 }}
+                    style={{ willChange: "transform, opacity" }}
+                    className="relative w-full aspect-[4/5] md:aspect-video bg-zinc-900/50 rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-10 mx-auto max-w-3xl flex items-center justify-center group transform-gpu"
                 >
-                    {/* Placeholder for GIF/Mockup */}
                     <img 
                         src="/financas.gif" 
                         alt="Finance Management Demo" 
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        loading="lazy"
+                        decoding="async"
                     />
                 </motion.div>
 

@@ -10,9 +10,9 @@ const ProblemSolutionSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-3xl md:text-5xl lg:text-6xl font-black text-white uppercase tracking-tighter mb-8 max-w-4xl mx-auto leading-[0.9]"
+                    className="text-2xl md:text-3xl lg:text-4xl font-black text-white uppercase tracking-tighter mb-10 max-w-4xl mx-auto leading-tight"
                 >
-                    Construa <span className="text-emerald-400 drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]">disciplina real</span> em 7 dias
+                    O sistema que transforma sua rotina em <span className="text-emerald-400 whitespace-nowrap">disciplina real.</span>
                 </motion.h2>
 
                 <motion.div
@@ -40,7 +40,7 @@ const ProblemSolutionSection = () => {
                             <div className="w-24 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent mt-6" />
 
                             <p className="text-lg md:text-2xl font-medium leading-relaxed text-gray-300 max-w-3xl mx-auto">
-                                Nós criamos o <span className="text-white font-bold underline decoration-emerald-500/50 underline-offset-8">primeiro sistema com I.A integrada</span> baseado em neurociência e produtividade para você parar de tentar e finalmente conseguir.
+                                Nós criamos o <span className="text-white font-bold underline decoration-emerald-500/50 underline-offset-8">primeiro sistema com I.A integrada</span> baseado em neurociência e produtividade para você parar de falhar e finalmente cumprir seus objetivos todos os dias, te guiamos com uma rotina gamificada a prova de falhas.
                             </p>
                         </div>
 

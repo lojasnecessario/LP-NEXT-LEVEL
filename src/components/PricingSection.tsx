@@ -21,7 +21,7 @@ const PricingSection = () => {
         { name: "Dashboard com missões diárias, dias vencidos", value: "49,90" },
         { name: "Planner de Treinos personalizados", value: "99,90" },
         { name: "Controle da dieta", value: "29,90" },
-        { name: "Controle financeiro com assistente I.A", value: "49,90" },
+        { name: "Controle financeiro com assistente I.A (BÔNUS GRÁTIS)", value: "0,00" },
         { name: "Controle de livros lidos", value: "19,90" },
         { name: "Recompensas fisicas", value: "19,90" },
         { name: "Atualizações do app", value: "79,90" },
@@ -67,8 +67,8 @@ const PricingSection = () => {
                                     <Check className="w-5 h-5 text-emerald-500 shrink-0" />
                                     <span className="text-sm md:text-base">{item.name}</span>
                                 </span>
-                                <span className="text-sm md:text-base font-medium line-through decoration-red-500/50 decoration-2">
-                                    R$ {item.value}
+                                <span className={`text-sm md:text-base font-medium ${item.value === "0,00" ? "text-emerald-400 font-bold" : "line-through decoration-red-500/50 decoration-2"}`}>
+                                    {item.value === "0,00" ? "GRÁTIS" : `R$ ${item.value}`}
                                 </span>
                             </li>
                         ))}

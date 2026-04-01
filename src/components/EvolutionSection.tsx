@@ -16,14 +16,17 @@ const EvolutionSection = () => {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="relative w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-8 mx-auto"
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5 }}
+                    style={{ willChange: "transform, opacity" }}
+                    className="relative w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-8 mx-auto transform-gpu"
                 >
                     <img 
                         src="/provasocial-v2.png" 
                         alt="Provas Sociais" 
                         className="w-full h-auto" 
+                        loading="lazy"
+                        decoding="async"
                     />
                 </motion.div>
 

@@ -33,7 +33,7 @@ const ComparisonSection = () => {
                     <div className="space-y-4 md:space-y-6 mb-12">
                         {[
                             { before: "Acorda sem saber por onde começar, pula de tarefa em tarefa e termina o dia com sensação de fracasso", after: "Acorda com um plano claro, executa sem pensar e termina o dia com sensação de progresso real" },
-                            { before: "Dinheiro entra e some… você nunca sabe pra onde foi", after: "Controle total das suas finanças com um assistente que te orienta em cada decisão" },
+                            { before: "Dinheiro entra e some… você nunca sabe pra onde foi", after: "Controle total das suas finanças com um assistente que te orienta em cada decisão (gratuito apenas esta semana)" },
                             { before: "Chega na academia perdido, repete os mesmos exercícios e não vê resultado", after: "Treinos prontos, personalizados e focados no seu objetivo" },
                             { before: "Come no automático e nunca sabe se tá fazendo certo", after: "Dieta ajustada pra você com controle total de macros e orientação prática no dia a dia" }
                         ].map((item, i) => (

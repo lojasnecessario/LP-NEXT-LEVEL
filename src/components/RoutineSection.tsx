@@ -16,14 +16,17 @@ const RoutineSection = () => {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="relative w-full aspect-[4/5] md:aspect-video bg-emerald-950/20 rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(16,185,129,0.1)] border border-emerald-500/20 mb-10 mx-auto max-w-3xl flex items-center justify-center"
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    style={{ willChange: "transform, opacity" }}
+                    className="relative w-full aspect-[4/5] md:aspect-video bg-emerald-950/20 rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(16,185,129,0.1)] border border-emerald-500/20 mb-10 mx-auto max-w-3xl flex items-center justify-center transform-gpu"
                 >
                     <img 
                         src="/Planner.gif" 
                         alt="Planner de Rotina Inteligente" 
                         className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
                     />
                 </motion.div>
 

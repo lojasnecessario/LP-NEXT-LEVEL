@@ -3,10 +3,14 @@ import { useEffect } from 'react';
 
 const HeroSection = () => {
   useEffect(() => {
-    var s = document.createElement("script");
-    s.src = "https://scripts.converteai.net/d6c609ef-60e9-4618-8522-87e9909e1a21/players/69cbb84dc602028f65c5cad6/v4/player.js";
-    s.async = !0;
-    document.head.appendChild(s);
+    const scriptId = "vturb-script";
+    if (!document.getElementById(scriptId)) {
+        var s = document.createElement("script");
+        s.id = scriptId;
+        s.src = "https://scripts.converteai.net/d6c609ef-60e9-4618-8522-87e9909e1a21/players/69cbb84dc602028f65c5cad6/v4/player.js";
+        s.async = !0;
+        document.head.appendChild(s);
+    }
   }, []);
 
   return (

@@ -16,15 +16,17 @@ const DietSection = () => {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="relative w-full aspect-[4/5] md:aspect-video bg-amber-950/20 rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(245,158,11,0.1)] border border-amber-500/20 mb-10 mx-auto max-w-3xl flex items-center justify-center"
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5 }}
+                    style={{ willChange: "transform, opacity" }}
+                    className="relative w-full aspect-[4/5] md:aspect-video bg-amber-950/20 rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(245,158,11,0.1)] border border-amber-500/20 mb-10 mx-auto max-w-3xl flex items-center justify-center transform-gpu"
                 >
-                    {/* Placeholder for GIF */}
                     <img 
                         src="/diet.gif" 
                         alt="Diet Demo" 
                         className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
                     />
                 </motion.div>
 

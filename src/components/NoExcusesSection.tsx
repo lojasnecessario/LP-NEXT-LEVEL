@@ -16,15 +16,17 @@ const NoExcusesSection = () => {
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="relative w-full aspect-[4/5] md:aspect-video bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-10 mx-auto max-w-3xl flex items-center justify-center"
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.5 }}
+                    style={{ willChange: "transform, opacity" }}
+                    className="relative w-full aspect-[4/5] md:aspect-video bg-zinc-900 rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-10 mx-auto max-w-3xl flex items-center justify-center transform-gpu"
                 >
-                    {/* Placeholder for GIF */}
                     <img 
                         src="/dash.gif" 
                         alt="App Dashboard Demo" 
                         className="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
                     />
                 </motion.div>
 
