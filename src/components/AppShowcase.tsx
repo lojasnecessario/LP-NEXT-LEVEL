@@ -736,6 +736,13 @@ const AppShowcase = () => {
           </div>
         </div>
 
+        {/* Interaction Hint */}
+        <div className="mt-6 flex items-center gap-2 text-white/30 text-[10px] font-black uppercase tracking-[0.2em] animate-pulse">
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50" />
+            interaja com a tela
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-500/50" />
+        </div>
+
         {/* Description */}
         <div className="space-y-8 mt-12 w-full">
           <AnimatePresence mode="wait">
