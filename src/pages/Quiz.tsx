@@ -1094,68 +1094,11 @@ export default function Quiz() {
                         </div>
 
                         <div className="flex flex-col gap-6">
-                            {/* Depoimento 1 */}
-                            <div className="p-6 rounded-3xl bg-zinc-900 border border-zinc-800">
-                                <div className="flex items-start gap-4 mb-5">
-                                    <img
-                                        src="/Image_fx (24).png"
-                                        alt="Lucas Ferreira"
-                                        className="w-14 h-14 rounded-2xl object-cover border-2 border-emerald-500/30 shrink-0"
-                                    />
-                                    <div>
-                                        <h4 className="font-bold text-white text-[15px]">Lucas Ferreira</h4>
-                                        <p className="text-zinc-500 text-xs font-medium mt-0.5">Estudante & Atleta amador</p>
-                                        <div className="flex gap-0.5 mt-2">
-                                            {[...Array(5)].map((_, i) => <span key={i} className="text-yellow-400 text-sm">&#9733;</span>)}
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="text-zinc-300 text-[14px] leading-relaxed">
-                                    "A I.A muda completamente como eu treino e me alimento. Ela analisa meu histórico, sugere os exercícios certos pra meu objetivo e ainda ajusta a dieta com base no meu gasto calórico. Em 2 meses eu já vi resultados que em 1 ano tentando sozinho eu nunca tive."
-                                </p>
-                            </div>
-
-                            {/* Depoimento 2 */}
-                            <div className="p-6 rounded-3xl bg-zinc-900 border border-zinc-800">
-                                <div className="flex items-start gap-4 mb-5">
-                                    <img
-                                        src="/Image_fx (23).png"
-                                        alt="Camila Rocha"
-                                        className="w-14 h-14 rounded-2xl object-cover border-2 border-emerald-500/30 shrink-0"
-                                    />
-                                    <div>
-                                        <h4 className="font-bold text-white text-[15px]">Camila Rocha</h4>
-                                        <p className="text-zinc-500 text-xs font-medium mt-0.5">Empreendedora</p>
-                                        <div className="flex gap-0.5 mt-2">
-                                            {[...Array(5)].map((_, i) => <span key={i} className="text-yellow-400 text-sm">&#9733;</span>)}
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="text-zinc-300 text-[14px] leading-relaxed">
-                                    "Eu sempre fui daquelas que cria listas e nunca conclui. Com o planejamento do sistema tudo mudou. As tarefas são estruturadas de forma inteligente e a I.A me lembra do que é prioridade. Hoje eu concluo +80% das minhas tarefas todo dia, algo inimaginavel antes."
-                                </p>
-                            </div>
-
-                            {/* Depoimento 3 */}
-                            <div className="p-6 rounded-3xl bg-zinc-900 border border-zinc-800">
-                                <div className="flex items-start gap-4 mb-5">
-                                    <img
-                                        src="/Image_fx (25).png"
-                                        alt="Rafael Andrade"
-                                        className="w-14 h-14 rounded-2xl object-cover border-2 border-emerald-500/30 shrink-0"
-                                    />
-                                    <div>
-                                        <h4 className="font-bold text-white text-[15px]">Rafael Andrade</h4>
-                                        <p className="text-zinc-500 text-xs font-medium mt-0.5">Desenvolvedor de Software</p>
-                                        <div className="flex gap-0.5 mt-2">
-                                            {[...Array(5)].map((_, i) => <span key={i} className="text-yellow-400 text-sm">&#9733;</span>)}
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="text-zinc-300 text-[14px] leading-relaxed">
-                                    "O planner semanal me ajudou a ter uma visão real da minha semana. Eu defino as metas lá e o sistema me mantém no trilho. Não perco mais tempo decidindo o que fazer, só executo. Minha organização melhorou absurdamente e as metas finalmente saem do papel."
-                                </p>
-                            </div>
+                            <img 
+                                src="/depoimentoquiz.png" 
+                                alt="Depoimentos" 
+                                className="w-full h-auto rounded-3xl border border-zinc-800 shadow-2xl" 
+                            />
                         </div>
 
                         <button
