@@ -14,9 +14,9 @@ import InstagramCTA from '../components/InstagramCTA';
 import FinalCTASection from '../components/FinalCTASection';
 import Footer from '../components/Footer';
 import FinanceSection from '../components/FinanceSection';
+import RankingSection from '../components/RankingSection';
 import ComparisonSection from '../components/ComparisonSection';
 import StepByStepSection from '../components/StepByStepSection';
-import PerformanceSection from '../components/PerformanceSection';
 import DiscountPopup from '../components/DiscountPopup';
 
 export default function Home() {
@@ -36,19 +36,17 @@ export default function Home() {
             <Navbar scrolled={scrolled} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             
             <HeroSection />
-
-            <ProblemSolutionSection />
             <ComparisonSection />
+            <ProblemSolutionSection />
             <NoExcusesSection />
             <RoutineSection />
-            <PerformanceSection />
             <BodyMindSection />
             <DietSection />
             <FinanceSection />
-            <StepByStepSection />
+            <RankingSection />
             <EvolutionSection />
-            <PricingSection />
             <HowIReceiveSection />
+            <PricingSection />
             <FAQSection />
             <InstagramCTA />
             <FinalCTASection />

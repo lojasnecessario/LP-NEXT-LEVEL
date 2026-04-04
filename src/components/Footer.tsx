@@ -22,7 +22,6 @@ const Footer = () => (
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Funcionalidades</a></li>
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Metodologia</a></li>
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Preços</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Changelog</a></li>
             </ul>
           </div>
           <div>

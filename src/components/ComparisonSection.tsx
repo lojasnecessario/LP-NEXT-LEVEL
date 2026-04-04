@@ -13,7 +13,7 @@ const ComparisonSection = () => {
                     viewport={{ once: true }}
                     className="text-2xl md:text-4xl font-black text-white uppercase tracking-tighter mb-12 text-center max-w-3xl mx-auto leading-tight"
                 >
-                    Veja como o <span className="text-emerald-400">Next Level</span> vai mudar sua disciplina
+                    O sistema que transforma sua rotina em <span className="text-emerald-400">disciplina real.</span>
                 </motion.h2>
 
                 <motion.div

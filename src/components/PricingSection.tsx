@@ -21,7 +21,8 @@ const PricingSection = () => {
         { name: "Dashboard com missões diárias, dias vencidos", value: "49,90" },
         { name: "Planner de Treinos personalizados", value: "99,90" },
         { name: "Controle da dieta", value: "29,90" },
-        { name: "Controle financeiro com assistente I.A (BÔNUS GRÁTIS)", value: "0,00" },
+        { name: "Controle financeiro com assistente I.A", value: "0,00" },
+        { name: "Protocolo de Energia e Foco", value: "0,00" },
         { name: "Controle de livros lidos", value: "19,90" },
         { name: "Recompensas fisicas", value: "19,90" },
         { name: "Atualizações do app", value: "79,90" },
@@ -68,7 +69,7 @@ const PricingSection = () => {
                                     <span className="text-sm md:text-base">{item.name}</span>
                                 </span>
                                 <span className={`text-sm md:text-base font-medium ${item.value === "0,00" ? "text-emerald-400 font-bold" : "line-through decoration-red-500/50 decoration-2"}`}>
-                                    {item.value === "0,00" ? "GRÁTIS" : `R$ ${item.value}`}
+                                    {item.value === "0,00" ? "BÔNUS" : `R$ ${item.value}`}
                                 </span>
                             </li>
                         ))}
@@ -77,9 +78,19 @@ const PricingSection = () => {
                     <div className="border-t border-white/10 pt-8 text-center">
                         <p className="text-gray-400 text-lg mb-2">de <span className="line-through decoration-red-500 text-gray-500">R$ 398,40</span> por apenas:</p>
                         
-                        <div className="flex justify-center items-baseline gap-2 mb-6">
+                        <div className="flex justify-center items-baseline gap-2 mb-4">
                             <span className="text-5xl md:text-7xl font-black text-white">29,99</span>
                         </div>
+
+                        {/* Neon Bonus Badge */}
+                        <div className="mb-6">
+                            <div className="inline-block px-6 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/50 shadow-[0_0_20px_rgba(16,185,129,0.3)] animate-pulse">
+                                <p className="text-[10px] md:text-xs font-black text-emerald-400 uppercase tracking-[0.2em]">
+                                    receba o bonus exclusivo: <span className="text-white">protocolo de energia e foco</span>
+                                </p>
+                            </div>
+                        </div>
+
                         <p className="text-emerald-400 font-bold mb-8">ou 6x de R$ 5,89</p>
 
                         {/* Timer */}
