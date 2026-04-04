@@ -1,6 +1,13 @@
+import { useRef } from 'react';
 import { CheckCircle, ArrowRight, Instagram } from 'lucide-react';
 
 export default function ThankYou() {
+    const installTutorialRef = useRef<HTMLDivElement>(null);
+
+    const scrollToInstall = () => {
+        installTutorialRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
     return (
         <div className="min-h-screen bg-[#050505] text-white selection:bg-indigo-500/30 flex flex-col">
             {/* Simple Header */}
@@ -36,31 +43,9 @@ export default function ThankYou() {
                                 Parabéns pela decisão de elevar sua rotina para o próximo nível. O seu acesso ao Next Level chegará no seu e-mail em instantes.
                             </p>
 
-                            {/* Welcome Video */}
-                            <div className="w-full aspect-video bg-black/40 rounded-2xl border border-white/10 mb-8 overflow-hidden relative group">
-                                <iframe
-                                    className="absolute inset-0 w-full h-full"
-                                    src="https://www.youtube.com/embed/X16Yyj3BWYE"
-                                    title="Boas-vindas Next Level"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-
-                            {/* Tutorial: How to Install */}
-                            <div className="mb-4 text-left">
-                                <h3 className="font-bold text-lg text-white">Como instalar o aplicativo:</h3>
-                            </div>
-                            <div className="w-full aspect-[9/16] max-w-[300px] mx-auto bg-black/40 rounded-2xl border border-white/10 mb-8 overflow-hidden relative group">
-                                <iframe
-                                    className="absolute inset-0 w-full h-full"
-                                    src="https://www.youtube.com/embed/lST1lMqkz94"
-                                    title="Como instalar o aplicativo"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
+                            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-red-500/10 border border-red-500/20 mb-12 animate-pulse">
+                                <div className="w-2 h-2 rounded-full bg-red-500" />
+                                <span className="text-red-500 text-sm font-black uppercase tracking-[0.1em]">não feche esta aba até terminar os tutoriais</span>
                             </div>
 
                             <div className="bg-white/5 rounded-2xl p-6 text-left mb-8 border border-white/5">
@@ -82,7 +67,10 @@ export default function ThankYou() {
                                         <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 font-bold border border-emerald-500/30">4</div>
                                         <div className="flex flex-col gap-2">
                                             <p className="text-gray-300">Após login adicione o Next Level nos favoritos do seu navegador ou coloque o app no seu menu iniciar do celular.</p>
-                                            <span className="text-emerald-400 text-sm font-bold cursor-pointer hover:underline inline-flex items-center gap-1">
+                                            <span 
+                                                onClick={scrollToInstall}
+                                                className="text-emerald-400 text-sm font-bold cursor-pointer hover:underline inline-flex items-center gap-1"
+                                            >
                                                 Como colocar no menu iniciar
                                             </span>
                                         </div>
@@ -98,7 +86,48 @@ export default function ThankYou() {
                                             <a href="https://wa.me/5511911511339" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline font-bold">clique aqui</a>
                                         </p>
                                     </li>
+                                    <li className="flex gap-4">
+                                        <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 font-bold border border-emerald-500/30">7</div>
+                                        <div className="flex flex-col gap-2">
+                                            <p className="text-gray-300">Acesse o seu bônus exclusivo:</p>
+                                            <a 
+                                                href="https://docs.google.com/document/d/1J91CwjcxVBwKmqwm88w1JEMwvHpT_GyS15YcFj8t2GE/edit?usp=sharing" 
+                                                target="_blank" 
+                                                rel="noopener noreferrer" 
+                                                className="text-emerald-400 font-bold hover:underline inline-flex items-center gap-1"
+                                            >
+                                                Protocolo de Energia e Foco <ArrowRight className="w-4 h-4" />
+                                            </a>
+                                        </div>
+                                    </li>
                                 </ul>
+                            </div>
+
+                            {/* Welcome Video */}
+                            <div className="w-full aspect-video bg-black/40 rounded-2xl border border-white/10 mb-8 overflow-hidden relative group">
+                                <iframe
+                                    className="absolute inset-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/X16Yyj3BWYE"
+                                    title="Boas-vindas Next Level"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+
+                            {/* Tutorial: How to Install */}
+                            <div ref={installTutorialRef} className="mb-4 text-left scroll-mt-24">
+                                <h3 className="font-bold text-lg text-white">Como instalar o aplicativo:</h3>
+                            </div>
+                            <div className="w-full aspect-[9/16] max-w-[300px] mx-auto bg-black/40 rounded-2xl border border-white/10 mb-12 overflow-hidden relative group">
+                                <iframe
+                                    className="absolute inset-0 w-full h-full"
+                                    src="https://www.youtube.com/embed/lST1lMqkz94"
+                                    title="Como instalar o aplicativo"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">

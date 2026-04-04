@@ -85,9 +85,9 @@ const PricingSection = () => {
                         {/* Neon Bonus Badge */}
                         <div className="mb-6">
                             <div className="inline-block px-6 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/50 shadow-[0_0_20px_rgba(16,185,129,0.3)] animate-pulse">
-                                <p className="text-[10px] md:text-xs font-black text-emerald-400 uppercase tracking-[0.2em]">
-                                    receba o bonus exclusivo: <span className="text-white">protocolo de energia e foco</span>
-                                </p>
+                                <a href="https://docs.google.com/document/d/1J91CwjcxVBwKmqwm88w1JEMwvHpT_GyS15YcFj8t2GE/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-[10px] md:text-xs font-black text-emerald-400 uppercase tracking-[0.2em] hover:text-white transition-colors">
+                                    acesse o protocolo de energia e foco
+                                </a>
                             </div>
                         </div>
 

@@ -22,6 +22,7 @@ const Footer = () => (
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Funcionalidades</a></li>
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Metodologia</a></li>
               <li><a href="#" className="hover:text-emerald-400 transition-colors">Preços</a></li>
+              <li><a href="https://docs.google.com/document/d/1J91CwjcxVBwKmqwm88w1JEMwvHpT_GyS15YcFj8t2GE/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="text-emerald-400 font-bold hover:text-emerald-300 transition-colors uppercase text-[10px] tracking-widest tracking-tighter">Acesse o Protocolo de Energia e Foco</a></li>
             </ul>
           </div>
           <div>
