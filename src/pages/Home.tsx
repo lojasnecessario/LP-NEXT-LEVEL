@@ -8,6 +8,7 @@ import BodyMindSection from '../components/BodyMindSection';
 import DietSection from '../components/DietSection';
 import EvolutionSection from '../components/EvolutionSection';
 import PricingSection from '../components/PricingSection';
+import HowIReceiveSection from '../components/HowIReceiveSection';
 import FAQSection from '../components/FAQSection';
 import InstagramCTA from '../components/InstagramCTA';
 import FinalCTASection from '../components/FinalCTASection';
@@ -47,6 +48,7 @@ export default function Home() {
             <StepByStepSection />
             <EvolutionSection />
             <PricingSection />
+            <HowIReceiveSection />
             <FAQSection />
             <InstagramCTA />
             <FinalCTASection />
