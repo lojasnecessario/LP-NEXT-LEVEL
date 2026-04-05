@@ -25,8 +25,8 @@ const RankingSection = () => {
                         src="/ranking.gif" 
                         alt="Ranking Demo" 
                         className="w-full h-full object-cover"
-                        loading="lazy"
-                        decoding="async"
+                        fetchPriority="high"
+                        decoding="sync"
                     />
                 </motion.div>
 

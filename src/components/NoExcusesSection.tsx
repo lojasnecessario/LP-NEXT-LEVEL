@@ -25,8 +25,8 @@ const NoExcusesSection = () => {
                         src="/dash.gif" 
                         alt="App Dashboard Demo" 
                         className="w-full h-full object-cover"
-                        loading="lazy"
-                        decoding="async"
+                        fetchPriority="high"
+                        decoding="sync"
                     />
                 </motion.div>
 

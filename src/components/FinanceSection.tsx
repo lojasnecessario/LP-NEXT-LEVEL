@@ -45,8 +45,8 @@ const FinanceSection = () => {
                         src="/financas.gif" 
                         alt="Finance Management Demo" 
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                        loading="lazy"
-                        decoding="async"
+                        fetchPriority="high"
+                        decoding="sync"
                     />
                 </motion.div>
 

@@ -25,8 +25,8 @@ const DietSection = () => {
                         src="/diet.gif" 
                         alt="Diet Demo" 
                         className="w-full h-full object-cover"
-                        loading="lazy"
-                        decoding="async"
+                        fetchPriority="high"
+                        decoding="sync"
                     />
                 </motion.div>
 

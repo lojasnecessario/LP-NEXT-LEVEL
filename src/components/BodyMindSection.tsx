@@ -25,8 +25,8 @@ const BodyMindSection = () => {
                         src="/workout.gif" 
                         alt="Workout Demo" 
                         className="w-full h-full object-cover"
-                        loading="lazy"
-                        decoding="async"
+                        fetchPriority="high"
+                        decoding="sync"
                     />
                 </motion.div>
 

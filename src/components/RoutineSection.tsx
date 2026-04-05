@@ -25,8 +25,8 @@ const RoutineSection = () => {
                         src="/Planner.gif" 
                         alt="Planner de Rotina Inteligente" 
                         className="w-full h-full object-cover"
-                        loading="lazy"
-                        decoding="async"
+                        fetchPriority="high"
+                        decoding="sync"
                     />
                 </motion.div>
 

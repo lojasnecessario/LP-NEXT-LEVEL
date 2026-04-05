@@ -800,6 +800,18 @@ export default function Quiz() {
         window.scrollTo(0, 0);
     }, [step]);
 
+    // Preload all GIFs to avoid transition micro-lag
+    useEffect(() => {
+        const gifsToPreload = [
+            '/gif1.webp', '/gif2.gif', '/gif3.gif', '/gif4.gif', '/gif5.gif',
+            '/dash.gif', '/diet.gif', '/financas.gif', '/workout.gif', '/Planner.gif', '/ranking.gif'
+        ];
+        gifsToPreload.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, []);
+
     const handleCTA = () => {
         trackMetaEvent('Lead', { source: 'quiz_completion' });
         window.location.href = 'https://nextlevel-app.online';
@@ -838,7 +850,7 @@ export default function Quiz() {
                             className="w-full md:w-auto px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-lg rounded-2xl flex flex-col items-center justify-center transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_-5px_rgba(16,185,129,0.3)] mx-auto group"
                         >
                             <div className="flex items-center gap-3">
-                                <span>Entrar no Sistema</span>
+                                <span>Continuar</span>
                                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                             </div>
                             <span className="text-[10px] uppercase tracking-widest opacity-70 font-black mt-1">leva menos de 30s</span>
@@ -869,7 +881,8 @@ export default function Quiz() {
                             alt="" 
                             width="220" 
                             height="220" 
-                            decoding="async" 
+                            decoding="sync" 
+                            fetchPriority="high"
                             className="w-full max-w-[180px] sm:max-w-[220px] mx-auto rounded-2xl mb-5 sm:mb-6 aspect-square object-cover border border-zinc-900 shadow-2xl" 
                         />
 
@@ -921,7 +934,8 @@ export default function Quiz() {
                             alt="" 
                             width="220" 
                             height="220" 
-                            decoding="async" 
+                            decoding="sync" 
+                            fetchPriority="high"
                             className="w-full max-w-[180px] sm:max-w-[220px] mx-auto rounded-2xl mb-5 sm:mb-6 aspect-square object-cover border border-zinc-900 shadow-2xl" 
                         />
 
@@ -973,7 +987,8 @@ export default function Quiz() {
                             alt="" 
                             width="220" 
                             height="220" 
-                            decoding="async" 
+                            decoding="sync" 
+                            fetchPriority="high"
                             className="w-full max-w-[180px] sm:max-w-[220px] mx-auto rounded-2xl mb-5 sm:mb-6 aspect-square object-cover border border-zinc-900 shadow-2xl" 
                         />
 
@@ -1029,7 +1044,8 @@ export default function Quiz() {
                             alt="" 
                             width="220" 
                             height="220" 
-                            decoding="async" 
+                            decoding="sync" 
+                            fetchPriority="high"
                             className="w-full max-w-[180px] sm:max-w-[220px] mx-auto rounded-2xl mb-5 sm:mb-6 aspect-square object-cover border border-zinc-900 shadow-2xl" 
                         />
 
@@ -1081,7 +1097,8 @@ export default function Quiz() {
                             alt="" 
                             width="220" 
                             height="220" 
-                            decoding="async" 
+                            decoding="sync" 
+                            fetchPriority="high"
                             className="w-full max-w-[180px] sm:max-w-[220px] mx-auto rounded-2xl mb-5 sm:mb-6 aspect-square object-cover border border-zinc-900 shadow-2xl" 
                         />
 
