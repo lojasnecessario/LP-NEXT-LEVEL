@@ -9,7 +9,7 @@ const QuizProgress = ({ currentStep }: { currentStep: number }) => {
             {[1, 2, 3, 4, 5, 6].map((s, idx) => (
                 <React.Fragment key={idx}>
                     <div 
-                        className={`w-6 h-6 md:w-9 md:h-9 rounded-full flex items-center justify-center border-2 transition-all duration-300 text-[9px] md:text-sm shrink-0 ${
+                        className={`w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 text-sm md:text-lg shrink-0 ${
                             currentStep === s 
                                 ? 'bg-white border-white text-black font-black' 
                                 : 'bg-transparent border-zinc-800 text-zinc-700 font-bold'
@@ -103,21 +103,9 @@ const AppMockup = ({ onComplete }: { onComplete: () => void }) => {
             exit={{ opacity: 0, y: -20 }}
             className="w-full max-w-[420px] mx-auto pb-10"
         >
-            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col h-[750px] font-sans">
-                <div className="px-6 pb-6 overflow-y-auto scrollbar-hide flex-1">
-                    <div className="pt-10 pb-8">
-                        <h2 className="text-[28px] font-bold tracking-tight">Visão Geral</h2>
-                        <p className="text-zinc-500 mt-1 text-sm font-medium">Sábado, 21 De Março</p>
-                        
-                        <div className="flex items-center gap-3 mt-6">
-                            <button className="flex-1 flex items-center justify-center gap-2 py-3.5 px-4 rounded-2xl bg-emerald-950/20 text-emerald-500 border border-emerald-900/40 font-bold text-sm">
-                                <Target className="w-4 h-4" />
-                                Ver Minha Rotina
-                            </button>
-                            <button className="flex-1 py-3.5 px-4 rounded-2xl bg-emerald-950/20 text-emerald-500/70 border border-emerald-900/30 font-extrabold text-[11px] tracking-wider">
-                                2 DIAS SEGUIDOS
-                            </button>
-                        </div>
+            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col font-sans">
+                <div className="px-6 pb-6 flex-1">
+                    <div className="pt-8 pb-8">
 
                         <div className="mt-6 p-6 rounded-3xl bg-[#0a0a0a] border border-zinc-800/80">
                             <div className="flex justify-between items-center">
@@ -222,33 +210,18 @@ const PlannerMockup = ({ onComplete }: { onComplete: () => void }) => {
             exit={{ opacity: 0, y: -20 }}
             className="w-full max-w-[420px] mx-auto pb-10"
         >
-            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col h-[750px] font-sans">
-                <div className="px-5 pb-6 overflow-y-auto scrollbar-hide flex-1">
-                    <div className="pt-10 pb-8">
-                        {/* Header */}
-                        <div className="flex justify-between items-center mb-8">
-                            <h2 className="text-[26px] font-bold tracking-tight">Planner Semanal</h2>
-                            <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-950/20 text-emerald-500 border border-emerald-900/40 text-[13px] font-bold">
-                                <Sparkles className="w-3.5 h-3.5" />
-                                IA
-                            </button>
-                        </div>
-
-                        {/* Week slider header */}
-                        <div className="flex items-center justify-between text-zinc-600 text-[13px] font-bold mb-6 px-1 tracking-wide">
-                            <button className="hover:text-emerald-500 transition-colors px-2">&lt;</button>
-                            <span>16 De Mar - 22 De Mar</span>
-                            <button className="hover:text-emerald-500 transition-colors px-2">&gt;</button>
-                        </div>
+            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col font-sans">
+                <div className="px-5 pb-6 flex-1">
+                    <div className="pt-8 pb-8">
 
                         {/* Days */}
-                        <div className="flex gap-2.5 overflow-x-auto pb-4 mb-4 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                        <div className="flex gap-2.5 overflow-x-auto pt-2 pb-8 mb-4 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
                             {[
                                 { day: 'Terça', num: '17', score: '7/12', active: false },
                                 { day: 'Quarta', num: '18', score: '3/8', active: false },
-                                { day: 'Quinta', num: '19', score: '0/12', active: false },
+                                { day: 'Quinta', num: '19', score: '0/12', active: true },
                                 { day: 'Sexta', num: '20', score: '0/12', active: false },
-                                { day: 'Sábado', num: '21', score: '0/6', active: true },
+                                { day: 'Sábado', num: '21', score: '0/6', active: false },
                                 { day: 'Domingo', num: '22', score: '0/6', active: false }
                             ].map((d, i) => (
                                 <div key={i} className={`flex flex-col items-center justify-center min-w-[65px] h-[85px] rounded-[20px] relative transition-all ${d.active ? 'bg-emerald-500 scale-105 shadow-[0_0_25px_rgba(16,185,129,0.3)] z-10' : 'bg-[#0a0a0a] border border-zinc-900/80 opacity-60 hover:opacity-100'}`}>
@@ -263,11 +236,11 @@ const PlannerMockup = ({ onComplete }: { onComplete: () => void }) => {
                         {/* Active Day Card */}
                         <div className="mt-8 p-5 rounded-3xl bg-[#0a0a0a] border border-emerald-900/40">
                             <div className="flex justify-between items-center mb-6">
-                                <h3 className="text-[20px] font-bold text-white">Sábado</h3>
-                                <span className="text-emerald-500 font-bold text-[13px] tracking-wide">21 de mar</span>
+                                <h3 className="text-[20px] font-bold text-white">Quinta</h3>
+                                <span className="text-emerald-500 font-bold text-[13px] tracking-wide">19 de mar</span>
                             </div>
 
-                            <div className="flex flex-col min-h-[140px] max-h-[300px] overflow-y-auto scrollbar-hide">
+                            <div className="flex flex-col space-y-3">
                                 <AnimatePresence>
                                     {tasks.map(task => (
                                         <PlannerTask key={task.id} title={task.title} onDelete={() => deleteTask(task.id)} />
@@ -309,20 +282,9 @@ const WorkoutMockup = ({ onComplete }: { onComplete: () => void }) => {
             exit={{ opacity: 0, y: -20 }}
             className="w-full max-w-[420px] mx-auto pb-10"
         >
-            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col h-[750px] font-sans">
-                <div className="px-5 pb-6 overflow-y-auto scrollbar-hide flex-1">
-                    <div className="pt-10 pb-8">
-                        <div className="flex items-center gap-3 mb-2">
-                            <h2 className="text-[28px] font-bold tracking-tight">Treinos</h2>
-                            <span className="px-2 py-0.5 rounded bg-emerald-500 text-black text-[10px] font-extrabold tracking-wider">PRÓ</span>
-                        </div>
-                        <p className="text-zinc-400 text-[13px] mb-6">Gerencie seus treinos e evolução.</p>
-
-                        <div className="flex items-center justify-between text-emerald-500 text-[15px] font-bold mb-6 px-1 tracking-wide bg-[#0a0a0a] border border-zinc-800 rounded-xl p-3">
-                            <button className="hover:text-emerald-400 transition-colors px-2">&lt;</button>
-                            <span className="text-center">16 de março - 22 de<br/>março</span>
-                            <button className="hover:text-emerald-400 transition-colors px-2">&gt;</button>
-                        </div>
+            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col font-sans">
+                <div className="px-5 pb-6 flex-1">
+                    <div className="pt-8 pb-8">
 
                         <div className="p-4 rounded-3xl bg-[#0a0a0a] border border-zinc-800/80 mb-4 h-[120px] flex flex-col justify-between">
                             <div className="flex justify-between items-start">
@@ -462,20 +424,9 @@ const WorkoutDetailMockup = ({ onComplete, onBack }: { onComplete: () => void, o
             exit={{ opacity: 0, scale: 1.05 }}
             className="w-full max-w-[420px] mx-auto pb-10"
         >
-            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col h-[750px] font-sans">
-                <div className="px-6 pb-6 overflow-y-auto scrollbar-hide flex-1">
-                    <div className="pt-10 pb-8">
-                        <div className="flex justify-between items-start mb-8 text-white">
-                            <div>
-                                <h3 className="text-[22px] font-bold mb-1.5 tracking-tight">Treino B - Costas e Bíceps</h3>
-                                <span className="text-zinc-500 text-xs font-bold flex items-center gap-1.5 uppercase tracking-widest">
-                                    <CalendarIcon className="w-3 h-3" /> 17 de março
-                                </span>
-                            </div>
-                            <button onClick={onBack} className="text-zinc-400 p-1 hover:text-white transition-colors">
-                                {onBack && <X className="w-6 h-6" />}
-                            </button>
-                        </div>
+            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col font-sans">
+                <div className="px-6 pb-6 flex-1">
+                    <div className="pt-8 pb-8">
 
                         <div className="p-5 rounded-3xl bg-[#0a0a0a] border border-zinc-800 flex gap-4 mb-8 relative overflow-hidden">
                             <div className="flex-1 z-10">
@@ -537,20 +488,9 @@ const DietMockup = ({ onComplete }: { onComplete: () => void }) => {
             exit={{ opacity: 0, scale: 1.05 }}
             className="w-full max-w-[420px] mx-auto pb-10"
         >
-            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col h-[750px] font-sans">
-                <div className="px-5 pb-6 overflow-y-auto scrollbar-hide flex-1">
-                    <div className="pt-10 pb-8">
-                        {/* Header fixed */}
-                        <div className="flex items-center gap-3 mb-2">
-                            <h2 className="text-[28px] font-bold tracking-tight">Dieta</h2>
-                            <span className="px-2 py-0.5 rounded bg-emerald-500 text-black text-[10px] font-extrabold tracking-wider">PRÓ</span>
-                        </div>
-                        <p className="text-zinc-400 text-[13px] mb-6">Plano alimentar personalizado pela IA.</p>
-
-                        <button className="w-full py-4 px-4 rounded-2xl bg-[#0a0a0a] border border-emerald-900/40 text-emerald-500 font-bold text-[15px] flex justify-center items-center gap-2 mb-8 transition-colors hover:bg-emerald-900/10">
-                            <Activity className="w-4 h-4" />
-                            Gerar Nova Dieta
-                        </button>
+            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col font-sans">
+                <div className="px-5 pb-6 flex-1">
+                    <div className="pt-8 pb-8">
 
                         {/* 4 Boxes Grid */}
                         <div className="grid grid-cols-2 gap-3 mb-8">
@@ -696,39 +636,15 @@ const FinanceMockup = ({ onComplete }: { onComplete: () => void }) => {
             exit={{ opacity: 0, y: -20 }}
             className="w-full max-w-[420px] mx-auto pb-10"
         >
-            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col h-[750px] font-sans">
-                {/* Header Profile Area (Top Bar) */}
-                <div className="px-6 pt-8 pb-4 flex items-center justify-between shrink-0">
-                     <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center border border-emerald-500/30">
-                        <div className="w-3.5 h-3.5 bg-emerald-500 rounded-sm" style={{ clipPath: 'polygon(50% 0%, 100% 100%, 0% 100%)' }} />
-                     </div>
-                     <div className="flex items-center gap-4">
-                        <div className="relative text-zinc-400">
-                            <Activity className="w-6 h-6" />
-                            <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-500 rounded-full border-2 border-[#050505]" />
-                        </div>
-                        <div className="w-8 h-8 rounded-full bg-emerald-500 border-2 border-emerald-500 p-0.5">
-                            <div className="w-full h-full rounded-full bg-[#0a0a0a] flex items-center justify-center">
-                                <Plus className="w-4 h-4 text-emerald-500" />
+            <div className="bg-[#050505] text-white rounded-[40px] border-[6px] border-zinc-900 overflow-hidden shadow-2xl relative flex flex-col font-sans">
+                <div className="px-6 pb-6 flex-1">
+                    <div className="pt-8 pb-8">
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center">
+                                <Wallet className="w-5 h-5 text-orange-400" />
                             </div>
+                            <h2 className="text-2xl font-black tracking-tight text-white uppercase">Resumo Financeiro</h2>
                         </div>
-                     </div>
-                </div>
-
-                <div className="px-6 pb-6 overflow-y-auto scrollbar-hide flex-1">
-                    <div className="flex items-center gap-3 mb-8">
-                        <div className="w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center">
-                            <Wallet className="w-5 h-5 text-orange-400" />
-                        </div>
-                        <h2 className="text-2xl font-black tracking-tight text-white uppercase">Finanças</h2>
-                    </div>
-
-                    {/* Month Selector */}
-                    <div className="flex items-center justify-center gap-10 mb-8 font-black text-zinc-100">
-                        <ChevronLeft className="w-5 h-5 text-zinc-600" />
-                        <span className="text-lg tracking-tight">Abril 2026</span>
-                        <ChevronRight className="w-5 h-5 text-zinc-600" />
-                    </div>
 
                     {/* Summary Cards */}
                     <div className="grid grid-cols-3 gap-2 mb-4">
@@ -845,6 +761,7 @@ const FinanceMockup = ({ onComplete }: { onComplete: () => void }) => {
                         </div>
                     </div>
                 </div>
+            </div>
 
                 {/* Bottom Nav Mock */}
                 <div className="px-4 py-4 bg-[#050505] border-t border-zinc-900 grid grid-cols-6 gap-0 shrink-0">
@@ -878,14 +795,18 @@ const FinanceMockup = ({ onComplete }: { onComplete: () => void }) => {
 export default function Quiz() {
     const [step, setStep] = useState<'intro' | 'question1' | 'mockup1' | 'question2' | 'mockup2' | 'question3' | 'mockup3' | 'mockup4' | 'question4' | 'mockup5' | 'questionFinance' | 'mockupFinance' | 'aiPresentation' | 'testimonials'>('intro');
     const [q2Value, setQ2Value] = useState(5);
+    
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [step]);
 
     const handleCTA = () => {
         trackMetaEvent('Lead', { source: 'quiz_completion' });
-        window.location.href = '/';
+        window.location.href = 'https://nextlevel-app.online';
     };
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans flex flex-col justify-center items-center p-4 overflow-hidden">
+        <div className="min-h-screen bg-black text-white font-sans flex flex-col justify-center items-center p-4">
             <AnimatePresence mode="wait">
 
                 {step === 'intro' && (
@@ -914,10 +835,13 @@ export default function Quiz() {
 
                         <button
                             onClick={() => setStep('question1')}
-                            className="w-full md:w-auto px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-lg rounded-2xl flex items-center justify-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_-5px_rgba(16,185,129,0.3)] mx-auto"
+                            className="w-full md:w-auto px-10 py-5 bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-lg rounded-2xl flex flex-col items-center justify-center transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_-5px_rgba(16,185,129,0.3)] mx-auto group"
                         >
-                            <span>Entrar no Sistema</span>
-                            <ArrowRight className="w-6 h-6" />
+                            <div className="flex items-center gap-3">
+                                <span>Entrar no Sistema</span>
+                                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                            </div>
+                            <span className="text-[10px] uppercase tracking-widest opacity-70 font-black mt-1">leva menos de 30s</span>
                         </button>
                     </motion.div>
                 )}
@@ -930,8 +854,8 @@ export default function Quiz() {
                         exit={{ opacity: 0, x: -20 }}
                         className="max-w-4xl w-full flex flex-col items-center justify-center min-h-[100dvh] py-8 px-4"
                     >
-                        <div className="mb-4">
-                             <img src="/logo.webp" alt="Logo" className="w-8 h-8 object-contain brightness-0 invert opacity-50" />
+                        <div className="mb-6">
+                             <img src="/logo.webp" alt="Logo" className="w-24 h-24 object-contain" />
                         </div>
                         
                         <QuizProgress currentStep={1} />
@@ -982,8 +906,8 @@ export default function Quiz() {
                         exit={{ opacity: 0, x: -20 }}
                         className="max-w-4xl w-full flex flex-col items-center justify-center min-h-[100dvh] py-8 px-4"
                     >
-                        <div className="mb-4">
-                             <img src="/logo.webp" alt="Logo" className="w-8 h-8 object-contain brightness-0 invert opacity-50" />
+                        <div className="mb-6">
+                             <img src="/logo.webp" alt="Logo" className="w-24 h-24 object-contain" />
                         </div>
                         
                         <QuizProgress currentStep={2} />
@@ -1034,8 +958,8 @@ export default function Quiz() {
                         exit={{ opacity: 0, x: -20 }}
                         className="max-w-4xl w-full flex flex-col items-center justify-center min-h-[100dvh] py-8 px-4"
                     >
-                        <div className="mb-4">
-                             <img src="/logo.webp" alt="Logo" className="w-8 h-8 object-contain brightness-0 invert opacity-50" />
+                        <div className="mb-6">
+                             <img src="/logo.webp" alt="Logo" className="w-24 h-24 object-contain" />
                         </div>
                         
                         <QuizProgress currentStep={3} />
@@ -1090,8 +1014,8 @@ export default function Quiz() {
                         exit={{ opacity: 0, x: -20 }}
                         className="max-w-4xl w-full flex flex-col items-center justify-center min-h-[100dvh] py-8 px-4"
                     >
-                        <div className="mb-4">
-                             <img src="/logo.webp" alt="Logo" className="w-8 h-8 object-contain brightness-0 invert opacity-50" />
+                        <div className="mb-6">
+                             <img src="/logo.webp" alt="Logo" className="w-24 h-24 object-contain" />
                         </div>
                         
                         <QuizProgress currentStep={4} />
@@ -1142,8 +1066,8 @@ export default function Quiz() {
                         exit={{ opacity: 0, x: -20 }}
                         className="max-w-4xl w-full flex flex-col items-center justify-center min-h-[100dvh] py-8 px-4"
                     >
-                        <div className="mb-4">
-                             <img src="/logo.webp" alt="Logo" className="w-8 h-8 object-contain brightness-0 invert opacity-50" />
+                        <div className="mb-6">
+                             <img src="/logo.webp" alt="Logo" className="w-24 h-24 object-contain" />
                         </div>
                         
                         <QuizProgress currentStep={5} />
@@ -1194,8 +1118,8 @@ export default function Quiz() {
                         exit={{ opacity: 0, y: -20 }}
                         className="max-w-4xl w-full flex flex-col items-center justify-center min-h-[100dvh] py-8 px-4"
                     >
-                        <div className="mb-4">
-                             <img src="/logo.webp" alt="Logo" className="w-8 h-8 object-contain brightness-0 invert opacity-50" />
+                        <div className="mb-6">
+                             <img src="/logo.webp" alt="Logo" className="w-24 h-24 object-contain" />
                         </div>
                         
                         <QuizProgress currentStep={6} />
@@ -1254,8 +1178,8 @@ export default function Quiz() {
                         exit={{ opacity: 0, scale: 1.05 }}
                         className="max-w-4xl w-full flex flex-col items-center justify-center min-h-[100dvh] py-8 px-4"
                     >
-                        <div className="mb-4">
-                             <img src="/logo.webp" alt="Logo" className="w-8 h-8 object-contain brightness-0 invert opacity-50" />
+                        <div className="mb-6">
+                             <img src="/logo.webp" alt="Logo" className="w-24 h-24 object-contain" />
                         </div>
                         
                         <QuizProgress currentStep={6} />

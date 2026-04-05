@@ -16,39 +16,9 @@ const AppShowcase = () => {
       title: 'Visão Geral',
       description: 'Tenha o controle total da sua performance. Visualize sua meta diária, missões pendentes e ritmo de tarefas em um só lugar.',
       content: (
-        <div className="bg-[#050505] h-full w-full overflow-y-auto custom-scrollbar">
-          {/* Header */}
-          <div className="sticky top-0 bg-[#050505]/80 backdrop-blur-md z-20 px-4 py-4 flex justify-between items-center border-b border-white/5">
-            <Menu className="w-6 h-6 text-gray-300" />
-            <div className="flex items-center gap-4">
-              <div className="relative">
-                <Bell className="w-6 h-6 text-gray-300" />
-                <div className="absolute top-0 right-0 w-2 h-2 bg-emerald-500 rounded-full border-2 border-[#050505]" />
-              </div>
-              <div className="w-8 h-8 rounded-full border border-emerald-500 flex items-center justify-center">
-                <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full border-2 border-emerald-500" />
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="bg-[#050505] w-full">
           <div className="p-4 space-y-6">
-            {/* Welcome Section */}
-            <div>
-              <h3 className="text-3xl font-black text-white mb-1">Visão Geral</h3>
-              <p className="text-gray-400 text-xs font-medium uppercase tracking-wider">Quarta-Feira, 25 De Fevereiro</p>
-            </div>
-
-            {/* Quick Actions */}
-            <div className="flex gap-3">
-              <button className="flex-1 flex items-center justify-center gap-2 py-3 px-2 rounded-xl border border-emerald-500/30 text-emerald-400 text-[10px] font-bold">
-                <Zap className="w-3 h-3" /> Ver Minha Rotina
-              </button>
-              <button className="flex-1 flex items-center justify-center gap-2 py-3 px-2 rounded-xl border border-emerald-500/30 text-emerald-400 text-[10px] font-bold">
-                <span className="text-white">1</span> DIAS SEGUIDOS
-              </button>
-            </div>
+            <div className="pt-8"></div>
 
             {/* Daily Goal Card */}
             <div className="bg-white/5 rounded-3xl p-6 border border-emerald-500/10 relative overflow-hidden">
@@ -192,32 +162,9 @@ const AppShowcase = () => {
       title: 'Workouts',
       description: 'Gerencie seus treinos e evolução. Acompanhe sua frequência semanal e tenha acesso a planos personalizados de elite.',
       content: (
-        <div className="bg-[#050505] h-full w-full overflow-y-auto custom-scrollbar">
-          {/* Header */}
-          <div className="sticky top-0 bg-[#050505]/80 backdrop-blur-md z-20 px-4 py-4 flex justify-between items-center border-b border-white/5">
-            <Menu className="w-6 h-6 text-gray-300" />
-            <div className="flex items-center gap-4">
-              <div className="relative">
-                <Bell className="w-6 h-6 text-gray-300" />
-                <div className="absolute top-0 right-0 w-2 h-2 bg-emerald-500 rounded-full border-2 border-[#050505]" />
-              </div>
-              <div className="w-8 h-8 rounded-full border border-emerald-500 flex items-center justify-center">
-                <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full border-2 border-emerald-500" />
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="bg-[#050505] w-full">
           <div className="p-4 space-y-6">
-            {/* Title Section */}
-            <div>
-              <div className="flex items-center gap-3 mb-1">
-                <h3 className="text-3xl font-black text-white">Workouts</h3>
-                <span className="bg-emerald-500 text-black text-[10px] font-black px-2 py-0.5 rounded">PRO</span>
-              </div>
-              <p className="text-gray-400 text-sm">Gerencie seus treinos e evolução.</p>
-            </div>
+            <div className="pt-8"></div>
 
             {/* Date Range Selector */}
             <div className="bg-white/5 rounded-xl p-3 flex items-center justify-between border border-white/5">
@@ -343,26 +290,9 @@ const AppShowcase = () => {
       title: 'Planner Semanal',
       description: 'Planeje sua semana com precisão cirúrgica. Use nossa IA para gerar rotinas otimizadas e gerencie cada bloco de tempo do seu dia.',
       content: (
-        <div className="bg-[#050505] h-full w-full overflow-y-auto custom-scrollbar">
-          {/* Header */}
-          <div className="sticky top-0 bg-[#050505]/80 backdrop-blur-md z-20 px-4 py-4 flex justify-between items-center border-b border-white/5">
-            <Menu className="w-6 h-6 text-gray-300" />
-            <div className="flex items-center gap-4">
-              <div className="relative">
-                <Bell className="w-6 h-6 text-gray-300" />
-                <div className="absolute top-0 right-0 w-2 h-2 bg-emerald-500 rounded-full border-2 border-[#050505]" />
-              </div>
-              <div className="w-8 h-8 rounded-full border border-emerald-500 flex items-center justify-center">
-                <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full border-2 border-emerald-500" />
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="bg-[#050505] w-full">
           <div className="p-4 space-y-6">
-            {/* Title Section */}
-            <div className="text-center">
+            <div className="pt-8 text-center">
               <h3 className="text-3xl font-black text-white mb-4">Planner Semanal</h3>
 
               <div className="flex items-center justify-center gap-8 mb-6">
@@ -382,8 +312,8 @@ const AppShowcase = () => {
             {/* Day Card */}
             <div className="bg-white/5 rounded-3xl border border-white/5 overflow-hidden">
               <div className="p-5 flex justify-between items-center border-b border-white/5">
-                <h4 className="text-lg font-black text-white">Segunda</h4>
-                <span className="text-[10px] font-bold text-gray-500 uppercase">23 de fev</span>
+                <h4 className="text-lg font-black text-white">Quinta</h4>
+                <span className="text-[10px] font-bold text-gray-500 uppercase">19 de mar</span>
               </div>
 
               <div className="p-4 space-y-3 relative">
@@ -432,30 +362,10 @@ const AppShowcase = () => {
       title: 'Leitura',
       description: 'Mantenha sua mente afiada. Registre suas sessões de leitura, acompanhe o progresso dos seus livros e nunca perca o hábito de aprender.',
       content: (
-        <div className="bg-[#050505] h-full w-full overflow-y-auto custom-scrollbar">
-          {/* Header */}
-          <div className="sticky top-0 bg-[#050505]/80 backdrop-blur-md z-20 px-4 py-4 flex justify-between items-center border-b border-white/5">
-            <Menu className="w-6 h-6 text-gray-300" />
-            <div className="flex items-center gap-4">
-              <div className="relative">
-                <Bell className="w-6 h-6 text-gray-300" />
-                <div className="absolute top-0 right-0 w-2 h-2 bg-emerald-500 rounded-full border-2 border-[#050505]" />
-              </div>
-              <div className="w-8 h-8 rounded-full border border-emerald-500 flex items-center justify-center">
-                <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full border-2 border-emerald-500" />
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="bg-[#050505] w-full">
           <div className="p-4 space-y-6">
-            {/* Title Section */}
-            <div>
-              <div className="flex items-center gap-3 mb-1">
-                <h3 className="text-3xl font-black text-white">Leitura</h3>
-                <span className="bg-emerald-500 text-black text-[10px] font-black px-2 py-0.5 rounded">DIÁRIO</span>
-              </div>
+            <div className="pt-8 items-center gap-3 mb-1">
+              <h3 className="text-3xl font-black text-white">Leitura</h3>
               <p className="text-gray-400 text-sm">Registre seus hábitos e páginas lidas.</p>
             </div>
 
@@ -561,26 +471,9 @@ const AppShowcase = () => {
       title: 'Seu Progresso',
       description: 'Sua evolução visualizada. Ganhe pontos, suba de nível e torne-se a melhor versão de si mesmo com o sistema de progressão por graus.',
       content: (
-        <div className="bg-[#050505] h-full w-full overflow-y-auto custom-scrollbar">
-          {/* Header */}
-          <div className="sticky top-0 bg-[#050505]/80 backdrop-blur-md z-20 px-4 py-4 flex justify-between items-center border-b border-white/5">
-            <Menu className="w-6 h-6 text-gray-300" />
-            <div className="flex items-center gap-4">
-              <div className="relative">
-                <Bell className="w-6 h-6 text-gray-300" />
-                <div className="absolute top-0 right-0 w-2 h-2 bg-emerald-500 rounded-full border-2 border-[#050505]" />
-              </div>
-              <div className="w-8 h-8 rounded-full border border-emerald-500 flex items-center justify-center">
-                <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                  <div className="w-3 h-3 rounded-full border-2 border-emerald-500" />
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div className="bg-[#050505] w-full">
           <div className="p-4 space-y-6">
-            {/* Title Section */}
-            <div>
+            <div className="pt-8">
               <h3 className="text-3xl font-black text-white mb-1">Seu Progresso</h3>
               <p className="text-gray-400 text-sm">Acompanhe sua evolução e conquistas.</p>
             </div>
@@ -711,7 +604,7 @@ const AppShowcase = () => {
           </button>
 
           {/* The Phone */}
-          <div className="relative w-[300px] h-[600px] bg-[#1a1a1a] rounded-[3rem] border-[8px] border-[#333] shadow-2xl overflow-hidden">
+          <div className="relative w-[300px] min-h-[500px] bg-[#1a1a1a] rounded-[3rem] border-[8px] border-[#333] shadow-2xl">
             {/* Notch */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#333] rounded-b-2xl z-30 flex items-center justify-center">
               <div className="w-2 h-2 rounded-full bg-[#111]" />
@@ -725,7 +618,7 @@ const AppShowcase = () => {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="h-full w-full"
+                className="w-full"
               >
                 {layouts[activeIndex].content}
               </motion.div>
